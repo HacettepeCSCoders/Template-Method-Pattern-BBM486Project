@@ -31,10 +31,16 @@ namespace WindowsFormsApp.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // EmployeesForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "EmployeesForm";
             this.Text = "EmployeesForm";
+            this.ResumeLayout(false);
         }
 
         #endregion

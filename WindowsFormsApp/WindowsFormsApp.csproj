@@ -44,6 +44,9 @@
         <Reference Include="System.Net.Http" />
         <Reference Include="System.Windows.Forms" />
         <Reference Include="System.Xml" />
+        <Reference Include="WindowsFormsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>bin\Debug\WindowsFormsApp.exe</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Color\ThemeColor.cs" />
@@ -67,8 +70,20 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="TextBox\CustomTextBox.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="TextBox\CustomTextBox.Designer.cs">
+          <DependentUpon>CustomTextBox.cs</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Forms\EmployeesForm.resx">
+          <DependentUpon>EmployeesForm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Forms\FormMainMenu.resx">
           <DependentUpon>FormMainMenu.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Forms\NewEmployeeForm.resx">
+          <DependentUpon>NewEmployeeForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +94,9 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="TextBox\CustomTextBox.resx">
+          <DependentUpon>CustomTextBox.cs</DependentUpon>
+        </EmbeddedResource>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
             <LastGenOutput>Settings.Designer.cs</LastGenOutput>

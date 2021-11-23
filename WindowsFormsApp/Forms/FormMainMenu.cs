@@ -96,7 +96,7 @@ namespace WindowsFormsApp
 
         private void btnAllRecordsPage_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.EmployeesForm(), sender);
         }
     }
 }

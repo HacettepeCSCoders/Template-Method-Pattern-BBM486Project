@@ -45,7 +45,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (51)))), ((int) (((byte) (51)))), ((int) (((byte) (76)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (39)))), ((int) (((byte) (60)))), ((int) (((byte) (117)))));
             this.panelMenu.Controls.Add(this.btnAllRecordsPage);
             this.panelMenu.Controls.Add(this.btnAddRecordPage);
             this.panelMenu.Controls.Add(this.panelLogo);
@@ -97,7 +97,7 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (39)))), ((int) (((byte) (39)))), ((int) (((byte) (58)))));
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (24)))), ((int) (((byte) (28)))), ((int) (((byte) (60)))));
             this.panelLogo.Controls.Add(this.lblLogo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -107,6 +107,7 @@
             // 
             // lblLogo
             // 
+            this.lblLogo.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (24)))), ((int) (((byte) (28)))), ((int) (((byte) (60)))));
             this.lblLogo.Font = new System.Drawing.Font("Yu Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblLogo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblLogo.Location = new System.Drawing.Point(40, 30);
@@ -117,7 +118,7 @@
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (150)))), ((int) (((byte) (136)))));
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
@@ -128,6 +129,7 @@
             // lblTitle
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
             this.lblTitle.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(92, 22);
@@ -178,8 +180,6 @@
         private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.Panel panelLogo;
-
-        private System.Windows.Forms.Panel panel1;
 
         private System.Windows.Forms.Panel panelMenu;
 

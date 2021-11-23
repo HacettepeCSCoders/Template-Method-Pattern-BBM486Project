@@ -63,7 +63,7 @@ namespace WindowsFormsApp
             {
                 if (prevBtn.GetType() == typeof(Button))
                 {
-                    prevBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    prevBtn.BackColor = ColorTranslator.FromHtml("#273c75");
                     prevBtn.ForeColor = Color.Gainsboro;
                     prevBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
                 }
@@ -91,6 +91,7 @@ namespace WindowsFormsApp
         private void btnAddRecordPage_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.NewEmployeeForm(), sender);
+            
         }
 
         private void btnAllRecordsPage_Click(object sender, EventArgs e)

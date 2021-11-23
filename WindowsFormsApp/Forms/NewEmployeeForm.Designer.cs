@@ -98,7 +98,7 @@ namespace WindowsFormsApp.Forms
             // pictureBoxNewEmployee
             // 
             this.pictureBoxNewEmployee.Image = ((System.Drawing.Image) (resources.GetObject("pictureBoxNewEmployee.Image")));
-            this.pictureBoxNewEmployee.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxNewEmployee.Location = new System.Drawing.Point(68, 12);
             this.pictureBoxNewEmployee.Name = "pictureBoxNewEmployee";
             this.pictureBoxNewEmployee.Size = new System.Drawing.Size(183, 158);
             this.pictureBoxNewEmployee.TabIndex = 11;
@@ -107,7 +107,7 @@ namespace WindowsFormsApp.Forms
             // customTextBox1
             // 
             this.customTextBox1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (240)))), ((int) (((byte) (240)))), ((int) (((byte) (240)))));
-            this.customTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
             this.customTextBox1.BorderSize = 2;
             this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBox1.ForeColor = System.Drawing.Color.DimGray;
@@ -115,14 +115,14 @@ namespace WindowsFormsApp.Forms
             this.customTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBox1.Name = "customTextBox1";
             this.customTextBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox1.Size = new System.Drawing.Size(233, 31);
+            this.customTextBox1.Size = new System.Drawing.Size(192, 31);
             this.customTextBox1.TabIndex = 12;
             this.customTextBox1.UnderlinedStyle = true;
             // 
             // customTextBox2
             // 
             this.customTextBox2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (240)))), ((int) (((byte) (240)))), ((int) (((byte) (240)))));
-            this.customTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
             this.customTextBox2.BorderSize = 2;
             this.customTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBox2.ForeColor = System.Drawing.Color.DimGray;
@@ -130,7 +130,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBox2.Name = "customTextBox2";
             this.customTextBox2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox2.Size = new System.Drawing.Size(233, 31);
+            this.customTextBox2.Size = new System.Drawing.Size(192, 31);
             this.customTextBox2.TabIndex = 13;
             this.customTextBox2.UnderlinedStyle = true;
             // 

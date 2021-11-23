@@ -7,20 +7,11 @@ namespace WindowsFormsApp
     { 
         public static List<string> ColorList = new List<string>()
         {
-            "#6B8E23",
-            "#7FFF00",
-            "#B0C4DE",
-            "#00FF00",
-            "#708090",
-            "#483D8B",
-            "#FFC0CB",
-            "#808080",
-            "#FA8072",
-            "#C0C0C0",
-            "#7FFFD4",
-            "#1E90FF",
-            "#E9967A",
-            "#4169E1"
+            
+            "#192a56",
+            "#192a56",
+            "#192a56"
+            
         };
 
         public static Color ChangeColorBrightness(Color color, double correctionFactor)

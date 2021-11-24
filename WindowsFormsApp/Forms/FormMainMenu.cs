@@ -24,6 +24,7 @@ namespace WindowsFormsApp
             InitializeComponent();
             random = new Random();
             btnMainMenuCross.Visible = false;
+            this.Text = "BBM 486 Design Patterns Project";
         }
         
         //Methods

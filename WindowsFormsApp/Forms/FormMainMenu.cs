@@ -85,18 +85,18 @@ namespace WindowsFormsApp
             this.panelDesktopPane.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitle.Text = childForm.Text;
         }
 
         private void btnAddRecordPage_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.NewEmployeeForm(), sender);
-            
+            lblTitle.Text = Forms.NewEmployeeForm.Title;
         }
 
         private void btnAllRecordsPage_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.EmployeesForm(), sender);
+            lblTitle.Text = Forms.EmployeesForm.Title;
         }
     }
 }

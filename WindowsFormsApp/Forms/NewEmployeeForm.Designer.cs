@@ -41,6 +41,7 @@ namespace WindowsFormsApp.Forms
             this.pictureBoxNewEmployee = new System.Windows.Forms.PictureBox();
             this.customTextBox1 = new WindowsFormsApp.CustomTextBox();
             this.customTextBox2 = new WindowsFormsApp.CustomTextBox();
+            this.btnNewEmployeeSubmit = new WindowsFormsApp.CustomButton.CustomButton();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxNewEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,11 +135,26 @@ namespace WindowsFormsApp.Forms
             this.customTextBox2.TabIndex = 13;
             this.customTextBox2.UnderlinedStyle = true;
             // 
+            // btnNewEmployeeSubmit
+            // 
+            this.btnNewEmployeeSubmit.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
+            this.btnNewEmployeeSubmit.FlatAppearance.BorderSize = 0;
+            this.btnNewEmployeeSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewEmployeeSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
+            this.btnNewEmployeeSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnNewEmployeeSubmit.Location = new System.Drawing.Point(276, 204);
+            this.btnNewEmployeeSubmit.Name = "btnNewEmployeeSubmit";
+            this.btnNewEmployeeSubmit.Size = new System.Drawing.Size(464, 40);
+            this.btnNewEmployeeSubmit.TabIndex = 14;
+            this.btnNewEmployeeSubmit.Text = "Submit";
+            this.btnNewEmployeeSubmit.UseVisualStyleBackColor = false;
+            // 
             // NewEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 494);
+            this.Controls.Add(this.btnNewEmployeeSubmit);
             this.Controls.Add(this.customTextBox2);
             this.Controls.Add(this.customTextBox1);
             this.Controls.Add(this.pictureBoxNewEmployee);
@@ -153,6 +169,10 @@ namespace WindowsFormsApp.Forms
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxNewEmployee)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private WindowsFormsApp.CustomButton.CustomButton btnNewEmployeeSubmit;
+
+        private WindowsFormsApp.CustomButton.CustomButton customButton1;
 
         private WindowsFormsApp.CustomTextBox customTextBox1;
 
@@ -171,7 +191,6 @@ namespace WindowsFormsApp.Forms
         private System.Windows.Forms.Label lblNewEmployeeName;
 
         private WindowsFormsApp.CustomTextBox customTextBox2;
-        private WindowsFormsApp.CustomTextBox customTextBox3;
         private WindowsFormsApp.CustomTextBox customTextBox4;
 
         #endregion

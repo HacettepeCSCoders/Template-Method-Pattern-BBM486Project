@@ -50,6 +50,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Color\ThemeColor.cs" />
+        <Compile Include="CustomButton\CustomButton.cs" />
         <Compile Include="Forms\EmployeesForm.cs">
           <SubType>Form</SubType>
         </Compile>

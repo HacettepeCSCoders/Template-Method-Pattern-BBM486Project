@@ -164,6 +164,7 @@ namespace WindowsFormsApp.Forms
             this.Controls.Add(this.lblNewEmployeeRole);
             this.Controls.Add(this.lblNewEmployeeDate);
             this.Controls.Add(this.lblNewEmployeeName);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
             this.Name = "NewEmployeeForm";
             this.Text = "NewEmployeeForm";
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxNewEmployee)).EndInit();

@@ -40,17 +40,13 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMainMenuFillRightBottom = new System.Windows.Forms.Panel();
-            this.panelMainManuLeft = new System.Windows.Forms.Panel();
-            this.panelMainMenuRight = new System.Windows.Forms.Panel();
-            this.panelMainMenuMiddle = new System.Windows.Forms.Panel();
-            this.pictureBoxMainMenuLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktopPane.SuspendLayout();
             this.panelMainMenuFillRightBottom.SuspendLayout();
-            this.panelMainMenuMiddle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxMainMenuLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -175,49 +171,22 @@
             // panelMainMenuFillRightBottom
             // 
             this.panelMainMenuFillRightBottom.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (17)))), ((int) (((byte) (17)))), ((int) (((byte) (45)))));
-            this.panelMainMenuFillRightBottom.Controls.Add(this.panelMainMenuMiddle);
-            this.panelMainMenuFillRightBottom.Controls.Add(this.panelMainMenuRight);
-            this.panelMainMenuFillRightBottom.Controls.Add(this.panelMainManuLeft);
+            this.panelMainMenuFillRightBottom.Controls.Add(this.pictureBox1);
             this.panelMainMenuFillRightBottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainMenuFillRightBottom.Location = new System.Drawing.Point(0, 0);
             this.panelMainMenuFillRightBottom.Name = "panelMainMenuFillRightBottom";
             this.panelMainMenuFillRightBottom.Size = new System.Drawing.Size(919, 455);
             this.panelMainMenuFillRightBottom.TabIndex = 0;
             // 
-            // panelMainManuLeft
+            // pictureBox1
             // 
-            this.panelMainManuLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMainManuLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelMainManuLeft.Name = "panelMainManuLeft";
-            this.panelMainManuLeft.Size = new System.Drawing.Size(280, 455);
-            this.panelMainManuLeft.TabIndex = 0;
-            // 
-            // panelMainMenuRight
-            // 
-            this.panelMainMenuRight.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMainMenuRight.Location = new System.Drawing.Point(361, 129);
-            this.panelMainMenuRight.Name = "panelMainMenuRight";
-            this.panelMainMenuRight.Size = new System.Drawing.Size(280, 455);
-            this.panelMainMenuRight.TabIndex = 1;
-            // 
-            // panelMainMenuMiddle
-            // 
-            this.panelMainMenuMiddle.Controls.Add(this.pictureBoxMainMenuLogo);
-            this.panelMainMenuMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainMenuMiddle.Location = new System.Drawing.Point(280, 0);
-            this.panelMainMenuMiddle.Name = "panelMainMenuMiddle";
-            this.panelMainMenuMiddle.Size = new System.Drawing.Size(639, 455);
-            this.panelMainMenuMiddle.TabIndex = 2;
-            // 
-            // pictureBoxMainMenuLogo
-            // 
-            this.pictureBoxMainMenuLogo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxMainMenuLogo.Image = ((System.Drawing.Image) (resources.GetObject("pictureBoxMainMenuLogo.Image")));
-            this.pictureBoxMainMenuLogo.Location = new System.Drawing.Point(55, 120);
-            this.pictureBoxMainMenuLogo.Name = "pictureBoxMainMenuLogo";
-            this.pictureBoxMainMenuLogo.Size = new System.Drawing.Size(641, 294);
-            this.pictureBoxMainMenuLogo.TabIndex = 0;
-            this.pictureBoxMainMenuLogo.TabStop = false;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(322, 135);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(389, 368);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormMainMenu
             // 
@@ -234,20 +203,13 @@
             this.panelTitleBar.ResumeLayout(false);
             this.panelDesktopPane.ResumeLayout(false);
             this.panelMainMenuFillRightBottom.ResumeLayout(false);
-            this.panelMainMenuMiddle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxMainMenuLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.PictureBox pictureBoxMainMenuLogo;
-
         private System.Windows.Forms.PictureBox pictureBox1;
 
-        private System.Windows.Forms.Panel panelMainMenuRight;
-        private System.Windows.Forms.Panel panelMainManuLeft;
         private System.Windows.Forms.Panel panel1;
-
-        private System.Windows.Forms.Panel panelMainMenuMiddle;
 
         private System.Windows.Forms.Panel PanelMainManuLeft;
 

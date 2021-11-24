@@ -23,6 +23,7 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             random = new Random();
+            btnMainMenuCross.Visible = false;
         }
         
         //Methods
@@ -53,6 +54,7 @@ namespace WindowsFormsApp
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    btnMainMenuCross.Visible = true;
                 }
             }
         }
@@ -97,6 +99,24 @@ namespace WindowsFormsApp
         {
             OpenChildForm(new Forms.EmployeesForm(), sender);
             lblTitle.Text = Forms.EmployeesForm.Title;
+        }
+
+        private void btnMainMenuCross_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            Reset();
+        }
+
+        private void Reset()
+        {
+            lblTitle.Text = "HOME";
+            panelTitleBar.BackColor = Color.FromArgb(25, 42, 86);
+            panelLogo.BackColor = Color.FromArgb(24, 28, 60);
+            currentButton = null;
+            btnMainMenuCross.Visible = false;
         }
     }
 }

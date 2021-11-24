@@ -4,7 +4,7 @@ namespace WindowsFormsApp.Forms
 {
     public partial class EmployeesForm : Form
     {
-        private static string _title = "Employees";
+        private static string _title = "EMPLOYEES";
         
         public EmployeesForm()
         {

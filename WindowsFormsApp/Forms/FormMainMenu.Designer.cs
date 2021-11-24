@@ -36,6 +36,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnMainMenuCross = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
@@ -119,12 +120,26 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
+            this.panelTitleBar.Controls.Add(this.btnMainMenuCross);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(919, 80);
             this.panelTitleBar.TabIndex = 1;
+            // 
+            // btnMainMenuCross
+            // 
+            this.btnMainMenuCross.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnMainMenuCross.FlatAppearance.BorderSize = 0;
+            this.btnMainMenuCross.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMainMenuCross.Image = ((System.Drawing.Image) (resources.GetObject("btnMainMenuCross.Image")));
+            this.btnMainMenuCross.Location = new System.Drawing.Point(0, 0);
+            this.btnMainMenuCross.Name = "btnMainMenuCross";
+            this.btnMainMenuCross.Size = new System.Drawing.Size(86, 80);
+            this.btnMainMenuCross.TabIndex = 1;
+            this.btnMainMenuCross.UseVisualStyleBackColor = true;
+            this.btnMainMenuCross.Click += new System.EventHandler(this.btnMainMenuCross_Click);
             // 
             // lblTitle
             // 
@@ -162,6 +177,8 @@
             this.panelTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnMainMenuCross;
 
         private System.Windows.Forms.Panel panelDesktopPane;
 

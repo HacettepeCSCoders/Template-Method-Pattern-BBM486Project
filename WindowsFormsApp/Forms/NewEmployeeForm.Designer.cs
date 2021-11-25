@@ -63,7 +63,7 @@ namespace WindowsFormsApp.Forms
             this.lblNewEmployeeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblNewEmployeeDate.Location = new System.Drawing.Point(548, 219);
             this.lblNewEmployeeDate.Name = "lblNewEmployeeDate";
-            this.lblNewEmployeeDate.Size = new System.Drawing.Size(41, 26);
+            this.lblNewEmployeeDate.Size = new System.Drawing.Size(74, 26);
             this.lblNewEmployeeDate.TabIndex = 6;
             this.lblNewEmployeeDate.Text = "Date: ";
             // 
@@ -72,7 +72,7 @@ namespace WindowsFormsApp.Forms
             this.lblNewEmployeeRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblNewEmployeeRole.Location = new System.Drawing.Point(276, 219);
             this.lblNewEmployeeRole.Name = "lblNewEmployeeRole";
-            this.lblNewEmployeeRole.Size = new System.Drawing.Size(41, 26);
+            this.lblNewEmployeeRole.Size = new System.Drawing.Size(68, 26);
             this.lblNewEmployeeRole.TabIndex = 7;
             this.lblNewEmployeeRole.Text = "Role:";
             // 

@@ -93,6 +93,12 @@ namespace WindowsFormsApp.Forms
                 height = 317;
             dataGridEmployees.Height = height;
             
+            var deleteButton=new DataGridViewButtonColumn();
+            deleteButton.Name="dataGridViewDeleteButton";
+            deleteButton.HeaderText="Delete";
+            deleteButton.Text="Delete";
+            deleteButton.UseColumnTextForButtonValue=true;
+            this.dataGridEmployees.Columns.Add(deleteButton);
             
             lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
         }

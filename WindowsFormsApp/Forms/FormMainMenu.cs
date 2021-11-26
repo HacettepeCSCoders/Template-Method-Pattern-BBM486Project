@@ -101,6 +101,12 @@ namespace WindowsFormsApp
             OpenChildForm(new Forms.EmployeesForm(), sender);
             lblTitle.Text = Forms.EmployeesForm.Title;
         }
+        
+        private void btnAddWorkHoursPage_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.AddWorkHoursForm(), sender);
+            lblTitle.Text = Forms.AddWorkHoursForm.Title;
+        }
 
         private void btnMainMenuCross_Click(object sender, EventArgs e)
         {

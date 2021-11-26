@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Linq;
 using System.Windows.Forms;
 
 public class emp
@@ -27,24 +29,7 @@ namespace WindowsFormsApp.Forms
         {
             InitializeComponent();
         }
-
-        public static string Title
-        {
-            get => _title;
-            set => _title = value;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void dataGridEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void EmployeesForm_Load(object sender, EventArgs e)
-        {
-            var arrEmp = new[]
+        ArrayList arrEmp = new ArrayList()
             {
                 new emp("burak","daglar","burak@gmail.com","5555555555","junior"),
                 new emp("uqi", "erdo*an", "uqi@outlook.com", "7777777777", "cleaner"),
@@ -81,6 +66,44 @@ namespace WindowsFormsApp.Forms
                 
                 
             };
+
+        public static string Title
+        {
+            get => _title;
+            set => _title = value;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void dataGridEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                //if click is on new row or header row
+                if( e.RowIndex == dataGridEmployees.NewRowIndex || e.RowIndex < 0)
+                    return;
+
+                //Check if click is on specific column 
+                if( e.ColumnIndex  == dataGridEmployees.Columns["dataGridViewDeleteButton"].Index)
+                {
+                    if (DialogResult.OK == MessageBox.Show("Are You Sure?","delete",MessageBoxButtons.OKCancel))
+                    {
+                        arrEmp.RemoveAt(e.RowIndex);
+                        dataGridEmployees.DataSource = null;
+                        dataGridEmployees.Columns.Clear();
+                        dataGridEmployees.DataSource = arrEmp;
+                        dataGridEmployees.Columns.Add(deleteButtonCreator());
+                        
+                        lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
+                    }
+                }
+            }
+        }
+
+        private void EmployeesForm_Load(object sender, EventArgs e)
+        {
+            
             dataGridEmployees.DataSource = arrEmp;
             
             var height = 40;
@@ -93,14 +116,18 @@ namespace WindowsFormsApp.Forms
                 height = 317;
             dataGridEmployees.Height = height;
             
+            dataGridEmployees.Columns.Add(deleteButtonCreator());
+            lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
+        }
+
+        private DataGridViewButtonColumn deleteButtonCreator()
+        {
             var deleteButton=new DataGridViewButtonColumn();
             deleteButton.Name="dataGridViewDeleteButton";
             deleteButton.HeaderText="Delete";
             deleteButton.Text="Delete";
             deleteButton.UseColumnTextForButtonValue=true;
-            this.dataGridEmployees.Columns.Add(deleteButton);
-            
-            lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
-        }
+            return deleteButton;
+        } 
     }
 }

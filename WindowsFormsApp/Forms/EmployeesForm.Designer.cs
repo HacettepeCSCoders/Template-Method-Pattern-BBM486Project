@@ -39,8 +39,7 @@ namespace WindowsFormsApp.Forms
             // 
             // dataGridEmployees
             // 
-            this.dataGridEmployees.AllowUserToAddRows = false;
-            this.dataGridEmployees.AllowUserToDeleteRows = false;
+            this.dataGridEmployees.AllowUserToOrderColumns = true;
             this.dataGridEmployees.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridEmployees.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridEmployees.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
@@ -55,7 +54,6 @@ namespace WindowsFormsApp.Forms
             this.dataGridEmployees.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridEmployees.Location = new System.Drawing.Point(0, 0);
             this.dataGridEmployees.Name = "dataGridEmployees";
-            this.dataGridEmployees.ReadOnly = true;
             this.dataGridEmployees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridEmployees.Size = new System.Drawing.Size(843, 317);
             this.dataGridEmployees.TabIndex = 0;

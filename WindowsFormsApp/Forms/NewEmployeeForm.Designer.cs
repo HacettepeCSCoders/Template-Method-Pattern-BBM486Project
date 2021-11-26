@@ -52,60 +52,67 @@ namespace WindowsFormsApp.Forms
             // lblNewEmployeeName
             // 
             this.lblNewEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
-            this.lblNewEmployeeName.Location = new System.Drawing.Point(276, 14);
+            this.lblNewEmployeeName.Location = new System.Drawing.Point(207, 11);
+            this.lblNewEmployeeName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewEmployeeName.Name = "lblNewEmployeeName";
-            this.lblNewEmployeeName.Size = new System.Drawing.Size(156, 26);
+            this.lblNewEmployeeName.Size = new System.Drawing.Size(117, 21);
             this.lblNewEmployeeName.TabIndex = 4;
             this.lblNewEmployeeName.Text = "First Name:";
             // 
             // lblNewEmployeeDate
             // 
             this.lblNewEmployeeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
-            this.lblNewEmployeeDate.Location = new System.Drawing.Point(548, 219);
+            this.lblNewEmployeeDate.Location = new System.Drawing.Point(411, 178);
+            this.lblNewEmployeeDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewEmployeeDate.Name = "lblNewEmployeeDate";
-            this.lblNewEmployeeDate.Size = new System.Drawing.Size(74, 26);
+            this.lblNewEmployeeDate.Size = new System.Drawing.Size(56, 21);
             this.lblNewEmployeeDate.TabIndex = 6;
             this.lblNewEmployeeDate.Text = "Date: ";
             // 
             // lblNewEmployeeRole
             // 
             this.lblNewEmployeeRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
-            this.lblNewEmployeeRole.Location = new System.Drawing.Point(276, 219);
+            this.lblNewEmployeeRole.Location = new System.Drawing.Point(207, 178);
+            this.lblNewEmployeeRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewEmployeeRole.Name = "lblNewEmployeeRole";
-            this.lblNewEmployeeRole.Size = new System.Drawing.Size(68, 26);
+            this.lblNewEmployeeRole.Size = new System.Drawing.Size(51, 21);
             this.lblNewEmployeeRole.TabIndex = 7;
             this.lblNewEmployeeRole.Text = "Role:";
             // 
             // lblNewEmployeeLastName
             // 
             this.lblNewEmployeeLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
-            this.lblNewEmployeeLastName.Location = new System.Drawing.Point(548, 14);
+            this.lblNewEmployeeLastName.Location = new System.Drawing.Point(411, 11);
+            this.lblNewEmployeeLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewEmployeeLastName.Name = "lblNewEmployeeLastName";
-            this.lblNewEmployeeLastName.Size = new System.Drawing.Size(156, 26);
+            this.lblNewEmployeeLastName.Size = new System.Drawing.Size(117, 21);
             this.lblNewEmployeeLastName.TabIndex = 8;
             this.lblNewEmployeeLastName.Text = "Last Name:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(548, 250);
+            this.dateTimePicker1.Location = new System.Drawing.Point(411, 203);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(192, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(145, 20);
             this.dateTimePicker1.TabIndex = 9;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(276, 248);
+            this.comboBox1.Location = new System.Drawing.Point(207, 202);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 24);
+            this.comboBox1.Size = new System.Drawing.Size(145, 21);
             this.comboBox1.TabIndex = 10;
             // 
             // pictureBoxNewEmployee
             // 
             this.pictureBoxNewEmployee.Image = ((System.Drawing.Image) (resources.GetObject("pictureBoxNewEmployee.Image")));
-            this.pictureBoxNewEmployee.Location = new System.Drawing.Point(68, 12);
+            this.pictureBoxNewEmployee.Location = new System.Drawing.Point(51, 10);
+            this.pictureBoxNewEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxNewEmployee.Name = "pictureBoxNewEmployee";
-            this.pictureBoxNewEmployee.Size = new System.Drawing.Size(183, 158);
+            this.pictureBoxNewEmployee.Size = new System.Drawing.Size(137, 128);
             this.pictureBoxNewEmployee.TabIndex = 11;
             this.pictureBoxNewEmployee.TabStop = false;
             // 
@@ -116,11 +123,11 @@ namespace WindowsFormsApp.Forms
             this.customTextBox1.BorderSize = 2;
             this.customTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBox1.Location = new System.Drawing.Point(276, 44);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBox1.Location = new System.Drawing.Point(207, 36);
+            this.customTextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox1.Size = new System.Drawing.Size(192, 31);
+            this.customTextBox1.Padding = new System.Windows.Forms.Padding(5, 6, 5, 8);
+            this.customTextBox1.Size = new System.Drawing.Size(144, 25);
             this.customTextBox1.TabIndex = 12;
             this.customTextBox1.UnderlinedStyle = true;
             // 
@@ -131,11 +138,11 @@ namespace WindowsFormsApp.Forms
             this.customTextBox2.BorderSize = 2;
             this.customTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBox2.Location = new System.Drawing.Point(548, 44);
-            this.customTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBox2.Location = new System.Drawing.Point(411, 36);
+            this.customTextBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox2.Size = new System.Drawing.Size(192, 31);
+            this.customTextBox2.Padding = new System.Windows.Forms.Padding(5, 6, 5, 8);
+            this.customTextBox2.Size = new System.Drawing.Size(144, 25);
             this.customTextBox2.TabIndex = 13;
             this.customTextBox2.UnderlinedStyle = true;
             // 
@@ -146,9 +153,10 @@ namespace WindowsFormsApp.Forms
             this.btnNewEmployeeSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewEmployeeSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.btnNewEmployeeSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnNewEmployeeSubmit.Location = new System.Drawing.Point(276, 306);
+            this.btnNewEmployeeSubmit.Location = new System.Drawing.Point(207, 249);
+            this.btnNewEmployeeSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNewEmployeeSubmit.Name = "btnNewEmployeeSubmit";
-            this.btnNewEmployeeSubmit.Size = new System.Drawing.Size(464, 40);
+            this.btnNewEmployeeSubmit.Size = new System.Drawing.Size(348, 32);
             this.btnNewEmployeeSubmit.TabIndex = 14;
             this.btnNewEmployeeSubmit.Text = "Submit";
             this.btnNewEmployeeSubmit.UseVisualStyleBackColor = false;
@@ -160,11 +168,11 @@ namespace WindowsFormsApp.Forms
             this.customTextBox3.BorderSize = 2;
             this.customTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBox3.Location = new System.Drawing.Point(548, 154);
-            this.customTextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBox3.Location = new System.Drawing.Point(411, 125);
+            this.customTextBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.customTextBox3.Name = "customTextBox3";
-            this.customTextBox3.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox3.Size = new System.Drawing.Size(192, 31);
+            this.customTextBox3.Padding = new System.Windows.Forms.Padding(5, 6, 5, 8);
+            this.customTextBox3.Size = new System.Drawing.Size(144, 25);
             this.customTextBox3.TabIndex = 18;
             this.customTextBox3.UnderlinedStyle = true;
             // 
@@ -175,37 +183,39 @@ namespace WindowsFormsApp.Forms
             this.customTextBox4.BorderSize = 2;
             this.customTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBox4.Location = new System.Drawing.Point(276, 154);
-            this.customTextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBox4.Location = new System.Drawing.Point(207, 125);
+            this.customTextBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.customTextBox4.Name = "customTextBox4";
-            this.customTextBox4.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox4.Size = new System.Drawing.Size(192, 31);
+            this.customTextBox4.Padding = new System.Windows.Forms.Padding(5, 6, 5, 8);
+            this.customTextBox4.Size = new System.Drawing.Size(144, 25);
             this.customTextBox4.TabIndex = 17;
             this.customTextBox4.UnderlinedStyle = true;
             // 
             // lblPhoneNumberNewEmployee
             // 
             this.lblPhoneNumberNewEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
-            this.lblPhoneNumberNewEmployee.Location = new System.Drawing.Point(548, 124);
+            this.lblPhoneNumberNewEmployee.Location = new System.Drawing.Point(411, 101);
+            this.lblPhoneNumberNewEmployee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhoneNumberNewEmployee.Name = "lblPhoneNumberNewEmployee";
-            this.lblPhoneNumberNewEmployee.Size = new System.Drawing.Size(156, 26);
+            this.lblPhoneNumberNewEmployee.Size = new System.Drawing.Size(117, 21);
             this.lblPhoneNumberNewEmployee.TabIndex = 16;
             this.lblPhoneNumberNewEmployee.Text = "Phone:";
             // 
             // lblEMailNewEmployee
             // 
             this.lblEMailNewEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
-            this.lblEMailNewEmployee.Location = new System.Drawing.Point(276, 124);
+            this.lblEMailNewEmployee.Location = new System.Drawing.Point(207, 101);
+            this.lblEMailNewEmployee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEMailNewEmployee.Name = "lblEMailNewEmployee";
-            this.lblEMailNewEmployee.Size = new System.Drawing.Size(156, 26);
+            this.lblEMailNewEmployee.Size = new System.Drawing.Size(117, 21);
             this.lblEMailNewEmployee.TabIndex = 15;
             this.lblEMailNewEmployee.Text = "E-Mail:";
             // 
             // NewEmployeeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 494);
+            this.ClientSize = new System.Drawing.Size(655, 379);
             this.Controls.Add(this.customTextBox3);
             this.Controls.Add(this.customTextBox4);
             this.Controls.Add(this.lblPhoneNumberNewEmployee);
@@ -221,6 +231,7 @@ namespace WindowsFormsApp.Forms
             this.Controls.Add(this.lblNewEmployeeDate);
             this.Controls.Add(this.lblNewEmployeeName);
             this.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NewEmployeeForm";
             this.Text = "NewEmployeeForm";
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxNewEmployee)).EndInit();

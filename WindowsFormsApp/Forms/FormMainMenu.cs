@@ -96,25 +96,6 @@ namespace WindowsFormsApp
             lblTitle.Text = Forms.NewEmployeeForm.Title;
         }
         
-        private void btnMainMenuCross_Click(object sender, EventArgs e)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-            Reset();
-        }
-
-        private void Reset()
-        {
-            lblTitle.Text = "HOME";
-            panelTitleBar.BackColor = Color.FromArgb(25, 42, 86);
-            panelLogo.BackColor = Color.FromArgb(24, 28, 60);
-            currentButton.BackColor = Color.FromArgb(39, 60, 117);
-            currentButton = null;
-            btnMainMenuCross.Visible = false;
-        }
-
         private void btnUpdateEmployeePage_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.UpdateEmployeeForm(), sender);
@@ -131,6 +112,24 @@ namespace WindowsFormsApp
         {
             OpenChildForm(new Forms.EmployeesForm(), sender);
             lblTitle.Text = Forms.EmployeesForm.Title;
+        }
+        
+        private void btnMainMenuCross_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            Reset();
+        }
+
+        private void Reset()
+        {
+            lblTitle.Text = "HOME";
+            panelTitleBar.BackColor = Color.FromArgb(25, 42, 86);
+            panelLogo.BackColor = Color.FromArgb(24, 28, 60);
+            DisableButton();
+            btnMainMenuCross.Visible = false;
         }
     }
 }

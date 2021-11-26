@@ -96,7 +96,7 @@ namespace WindowsFormsApp.Forms
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(221, 246);
+            this.comboBox1.Location = new System.Drawing.Point(221, 247);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(192, 24);
@@ -105,10 +105,10 @@ namespace WindowsFormsApp.Forms
             // pictureBoxNewEmployee
             // 
             this.pictureBoxNewEmployee.Image = ((System.Drawing.Image) (resources.GetObject("pictureBoxNewEmployee.Image")));
-            this.pictureBoxNewEmployee.Location = new System.Drawing.Point(12, 11);
+            this.pictureBoxNewEmployee.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxNewEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxNewEmployee.Name = "pictureBoxNewEmployee";
-            this.pictureBoxNewEmployee.Size = new System.Drawing.Size(183, 158);
+            this.pictureBoxNewEmployee.Size = new System.Drawing.Size(149, 135);
             this.pictureBoxNewEmployee.TabIndex = 11;
             this.pictureBoxNewEmployee.TabStop = false;
             // 
@@ -123,7 +123,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBox1.Name = "customTextBox1";
             this.customTextBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox1.Size = new System.Drawing.Size(192, 31);
+            this.customTextBox1.Size = new System.Drawing.Size(161, 31);
             this.customTextBox1.TabIndex = 12;
             this.customTextBox1.UnderlinedStyle = true;
             // 
@@ -138,7 +138,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBox2.Name = "customTextBox2";
             this.customTextBox2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox2.Size = new System.Drawing.Size(192, 31);
+            this.customTextBox2.Size = new System.Drawing.Size(161, 31);
             this.customTextBox2.TabIndex = 13;
             this.customTextBox2.UnderlinedStyle = true;
             // 
@@ -168,7 +168,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBox3.Name = "customTextBox3";
             this.customTextBox3.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox3.Size = new System.Drawing.Size(192, 31);
+            this.customTextBox3.Size = new System.Drawing.Size(161, 31);
             this.customTextBox3.TabIndex = 18;
             this.customTextBox3.UnderlinedStyle = true;
             // 
@@ -183,7 +183,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBox4.Name = "customTextBox4";
             this.customTextBox4.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
-            this.customTextBox4.Size = new System.Drawing.Size(192, 31);
+            this.customTextBox4.Size = new System.Drawing.Size(161, 31);
             this.customTextBox4.TabIndex = 17;
             this.customTextBox4.UnderlinedStyle = true;
             // 

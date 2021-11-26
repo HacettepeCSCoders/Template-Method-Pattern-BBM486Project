@@ -63,7 +63,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 535);
+            this.panelMenu.Size = new System.Drawing.Size(235, 535);
             this.panelMenu.TabIndex = 0;
             // 
             // btnAllRecordsPage
@@ -79,7 +79,7 @@
             this.btnAllRecordsPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAllRecordsPage.Name = "btnAllRecordsPage";
             this.btnAllRecordsPage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAllRecordsPage.Size = new System.Drawing.Size(220, 60);
+            this.btnAllRecordsPage.Size = new System.Drawing.Size(235, 60);
             this.btnAllRecordsPage.TabIndex = 4;
             this.btnAllRecordsPage.Text = " Employees";
             this.btnAllRecordsPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,7 +100,7 @@
             this.btnAddWorkHoursPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddWorkHoursPage.Name = "btnAddWorkHoursPage";
             this.btnAddWorkHoursPage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAddWorkHoursPage.Size = new System.Drawing.Size(220, 60);
+            this.btnAddWorkHoursPage.Size = new System.Drawing.Size(235, 60);
             this.btnAddWorkHoursPage.TabIndex = 3;
             this.btnAddWorkHoursPage.Text = " Work Hours";
             this.btnAddWorkHoursPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,7 +121,7 @@
             this.btnUpdateEmployeePage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateEmployeePage.Name = "btnUpdateEmployeePage";
             this.btnUpdateEmployeePage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnUpdateEmployeePage.Size = new System.Drawing.Size(220, 60);
+            this.btnUpdateEmployeePage.Size = new System.Drawing.Size(235, 60);
             this.btnUpdateEmployeePage.TabIndex = 2;
             this.btnUpdateEmployeePage.Text = " Update Employee";
             this.btnUpdateEmployeePage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,7 +142,7 @@
             this.btnAddRecordPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRecordPage.Name = "btnAddRecordPage";
             this.btnAddRecordPage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAddRecordPage.Size = new System.Drawing.Size(220, 60);
+            this.btnAddRecordPage.Size = new System.Drawing.Size(235, 60);
             this.btnAddRecordPage.TabIndex = 1;
             this.btnAddRecordPage.Text = " New Employee";
             this.btnAddRecordPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,7 +158,7 @@
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.Size = new System.Drawing.Size(235, 80);
             this.panelLogo.TabIndex = 0;
             // 
             // lblLogo
@@ -178,10 +178,10 @@
             this.panelTitleBar.Controls.Add(this.btnMainMenuCross);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(235, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(919, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(904, 80);
             this.panelTitleBar.TabIndex = 1;
             // 
             // btnMainMenuCross
@@ -204,7 +204,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
             this.lblTitle.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(92, 22);
+            this.lblTitle.Location = new System.Drawing.Point(85, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(735, 39);
             this.lblTitle.TabIndex = 0;
@@ -215,10 +215,10 @@
             // 
             this.panelDesktopPane.Controls.Add(this.panelMainMenuFillRightBottom);
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPane.Location = new System.Drawing.Point(220, 80);
+            this.panelDesktopPane.Location = new System.Drawing.Point(235, 80);
             this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(919, 455);
+            this.panelDesktopPane.Size = new System.Drawing.Size(904, 455);
             this.panelDesktopPane.TabIndex = 2;
             // 
             // panelMainMenuFillRightBottom
@@ -229,14 +229,14 @@
             this.panelMainMenuFillRightBottom.Location = new System.Drawing.Point(0, 0);
             this.panelMainMenuFillRightBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMainMenuFillRightBottom.Name = "panelMainMenuFillRightBottom";
-            this.panelMainMenuFillRightBottom.Size = new System.Drawing.Size(919, 455);
+            this.panelMainMenuFillRightBottom.Size = new System.Drawing.Size(904, 455);
             this.panelMainMenuFillRightBottom.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(320, 106);
+            this.pictureBox1.Location = new System.Drawing.Point(313, 106);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(389, 368);

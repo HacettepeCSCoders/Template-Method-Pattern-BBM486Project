@@ -3,4 +3,5 @@
 	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1048576</s:Int64>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=WindowsFormsApp_002FForms_002FFormMainMenu/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=WindowsFormsApp_002FForms_002FUpdateEmployeeForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>

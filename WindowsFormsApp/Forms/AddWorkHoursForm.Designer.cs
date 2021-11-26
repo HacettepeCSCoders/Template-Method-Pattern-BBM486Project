@@ -54,7 +54,7 @@ namespace WindowsFormsApp.Forms
             // 
             this.lblAddWorkHoursSelectEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblAddWorkHoursSelectEmployee.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblAddWorkHoursSelectEmployee.Location = new System.Drawing.Point(174, 20);
+            this.lblAddWorkHoursSelectEmployee.Location = new System.Drawing.Point(212, 9);
             this.lblAddWorkHoursSelectEmployee.Name = "lblAddWorkHoursSelectEmployee";
             this.lblAddWorkHoursSelectEmployee.Size = new System.Drawing.Size(257, 28);
             this.lblAddWorkHoursSelectEmployee.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace WindowsFormsApp.Forms
             // comboBoxAddWorkHoursSelectEmployee
             // 
             this.comboBoxAddWorkHoursSelectEmployee.FormattingEnabled = true;
-            this.comboBoxAddWorkHoursSelectEmployee.Location = new System.Drawing.Point(174, 63);
+            this.comboBoxAddWorkHoursSelectEmployee.Location = new System.Drawing.Point(212, 40);
             this.comboBoxAddWorkHoursSelectEmployee.Name = "comboBoxAddWorkHoursSelectEmployee";
             this.comboBoxAddWorkHoursSelectEmployee.Size = new System.Drawing.Size(405, 24);
             this.comboBoxAddWorkHoursSelectEmployee.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBoxAddWorkHoursEnterWorkHours.BorderSize = 2;
             this.customTextBoxAddWorkHoursEnterWorkHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBoxAddWorkHoursEnterWorkHours.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBoxAddWorkHoursEnterWorkHours.Location = new System.Drawing.Point(174, 149);
+            this.customTextBoxAddWorkHoursEnterWorkHours.Location = new System.Drawing.Point(212, 126);
             this.customTextBoxAddWorkHoursEnterWorkHours.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBoxAddWorkHoursEnterWorkHours.Name = "customTextBoxAddWorkHoursEnterWorkHours";
             this.customTextBoxAddWorkHoursEnterWorkHours.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
@@ -87,7 +87,7 @@ namespace WindowsFormsApp.Forms
             // 
             this.lblAddWorkHoursEnterWorkHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblAddWorkHoursEnterWorkHours.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblAddWorkHoursEnterWorkHours.Location = new System.Drawing.Point(174, 126);
+            this.lblAddWorkHoursEnterWorkHours.Location = new System.Drawing.Point(212, 103);
             this.lblAddWorkHoursEnterWorkHours.Name = "lblAddWorkHoursEnterWorkHours";
             this.lblAddWorkHoursEnterWorkHours.Size = new System.Drawing.Size(257, 28);
             this.lblAddWorkHoursEnterWorkHours.TabIndex = 4;
@@ -100,7 +100,7 @@ namespace WindowsFormsApp.Forms
             this.btnAddWorkHoursSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddWorkHoursSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.btnAddWorkHoursSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnAddWorkHoursSubmit.Location = new System.Drawing.Point(174, 242);
+            this.btnAddWorkHoursSubmit.Location = new System.Drawing.Point(212, 219);
             this.btnAddWorkHoursSubmit.Name = "btnAddWorkHoursSubmit";
             this.btnAddWorkHoursSubmit.Size = new System.Drawing.Size(405, 39);
             this.btnAddWorkHoursSubmit.TabIndex = 5;

@@ -92,13 +92,9 @@ namespace WindowsFormsApp.Forms
         }
 
         private System.Windows.Forms.Label lblTotalEmployees;
-
-        private System.Windows.Forms.Label label1;
-
+        
         private System.Windows.Forms.DataGridView dataGridEmployees;
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-
+        
         #endregion
     }
 }

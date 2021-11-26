@@ -54,21 +54,23 @@ namespace WindowsFormsApp.Forms
             this.dataGridEmployees.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridEmployees.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridEmployees.Location = new System.Drawing.Point(0, 0);
+            this.dataGridEmployees.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridEmployees.Name = "dataGridEmployees";
             this.dataGridEmployees.ReadOnly = true;
             this.dataGridEmployees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridEmployees.Size = new System.Drawing.Size(843, 317);
+            this.dataGridEmployees.Size = new System.Drawing.Size(1124, 390);
             this.dataGridEmployees.TabIndex = 0;
             this.dataGridEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmployees_CellContentClick);
             // 
             // lblTotalEmployees
             // 
             this.lblTotalEmployees.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTotalEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
+            this.lblTotalEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblTotalEmployees.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblTotalEmployees.Location = new System.Drawing.Point(0, 317);
+            this.lblTotalEmployees.Location = new System.Drawing.Point(0, 390);
+            this.lblTotalEmployees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalEmployees.Name = "lblTotalEmployees";
-            this.lblTotalEmployees.Size = new System.Drawing.Size(843, 46);
+            this.lblTotalEmployees.Size = new System.Drawing.Size(1124, 57);
             this.lblTotalEmployees.TabIndex = 1;
             this.lblTotalEmployees.Text = "Total Number of Employees: ";
             this.lblTotalEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -76,12 +78,12 @@ namespace WindowsFormsApp.Forms
             // 
             // EmployeesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 492);
+            this.ClientSize = new System.Drawing.Size(1124, 606);
             this.Controls.Add(this.lblTotalEmployees);
             this.Controls.Add(this.dataGridEmployees);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EmployeesForm";
             this.Text = "EmployeesForm";
             this.Load += new System.EventHandler(this.EmployeesForm_Load);

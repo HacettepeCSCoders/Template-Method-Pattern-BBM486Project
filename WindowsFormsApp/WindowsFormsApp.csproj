@@ -75,6 +75,12 @@
         <Compile Include="Forms\NewEmployeeForm.Designer.cs">
           <DependentUpon>NewEmployeeForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="Forms\UpdateEmployeeForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Forms\UpdateEmployeeForm.Designer.cs">
+          <DependentUpon>UpdateEmployeeForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="TextBox\CustomTextBox.cs">

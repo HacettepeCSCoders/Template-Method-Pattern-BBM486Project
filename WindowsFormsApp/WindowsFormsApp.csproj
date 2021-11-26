@@ -51,6 +51,12 @@
     <ItemGroup>
         <Compile Include="Color\ThemeColor.cs" />
         <Compile Include="CustomButton\CustomButton.cs" />
+        <Compile Include="Forms\AddWorkHoursForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Forms\AddWorkHoursForm.Designer.cs">
+          <DependentUpon>AddWorkHoursForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Forms\EmployeesForm.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -77,6 +83,9 @@
         <Compile Include="TextBox\CustomTextBox.Designer.cs">
           <DependentUpon>CustomTextBox.cs</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="Forms\AddWorkHoursForm.resx">
+          <DependentUpon>AddWorkHoursForm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Forms\EmployeesForm.resx">
           <DependentUpon>EmployeesForm.cs</DependentUpon>
         </EmbeddedResource>

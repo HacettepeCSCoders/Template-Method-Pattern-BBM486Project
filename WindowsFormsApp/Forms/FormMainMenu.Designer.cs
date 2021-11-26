@@ -31,6 +31,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnAddWorkHoursPage = new System.Windows.Forms.Button();
             this.btnAllRecordsPage = new System.Windows.Forms.Button();
             this.btnAddRecordPage = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -52,6 +53,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (39)))), ((int) (((byte) (60)))), ((int) (((byte) (117)))));
+            this.panelMenu.Controls.Add(this.btnAddWorkHoursPage);
             this.panelMenu.Controls.Add(this.btnAllRecordsPage);
             this.panelMenu.Controls.Add(this.btnAddRecordPage);
             this.panelMenu.Controls.Add(this.panelLogo);
@@ -60,6 +62,26 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 535);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnAddWorkHoursPage
+            // 
+            this.btnAddWorkHoursPage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddWorkHoursPage.FlatAppearance.BorderSize = 0;
+            this.btnAddWorkHoursPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddWorkHoursPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
+            this.btnAddWorkHoursPage.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddWorkHoursPage.Image = ((System.Drawing.Image) (resources.GetObject("btnAddWorkHoursPage.Image")));
+            this.btnAddWorkHoursPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddWorkHoursPage.Location = new System.Drawing.Point(0, 200);
+            this.btnAddWorkHoursPage.Name = "btnAddWorkHoursPage";
+            this.btnAddWorkHoursPage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnAddWorkHoursPage.Size = new System.Drawing.Size(220, 60);
+            this.btnAddWorkHoursPage.TabIndex = 3;
+            this.btnAddWorkHoursPage.Text = " Work Hours";
+            this.btnAddWorkHoursPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddWorkHoursPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddWorkHoursPage.UseVisualStyleBackColor = true;
+            this.btnAddWorkHoursPage.Click += new System.EventHandler(this.btnAddWorkHoursPage_Click);
             // 
             // btnAllRecordsPage
             // 
@@ -206,6 +228,8 @@
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnAddWorkHoursPage;
 
         private System.Windows.Forms.PictureBox pictureBox1;
 

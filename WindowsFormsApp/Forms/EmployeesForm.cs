@@ -95,7 +95,7 @@ namespace WindowsFormsApp.Forms
             
             var deleteButton=new DataGridViewButtonColumn();
             deleteButton.Name="dataGridViewDeleteButton";
-            deleteButton.HeaderText="Delete";
+            deleteButton.HeaderText="";
             deleteButton.Text="Delete";
             deleteButton.UseColumnTextForButtonValue=true;
             this.dataGridEmployees.Columns.Add(deleteButton);

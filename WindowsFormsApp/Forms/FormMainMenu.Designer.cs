@@ -72,10 +72,10 @@
             this.btnAddWorkHoursPage.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAddWorkHoursPage.Image = ((System.Drawing.Image) (resources.GetObject("btnAddWorkHoursPage.Image")));
             this.btnAddWorkHoursPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddWorkHoursPage.Location = new System.Drawing.Point(0, 200);
+            this.btnAddWorkHoursPage.Location = new System.Drawing.Point(0, 220);
             this.btnAddWorkHoursPage.Name = "btnAddWorkHoursPage";
             this.btnAddWorkHoursPage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAddWorkHoursPage.Size = new System.Drawing.Size(220, 60);
+            this.btnAddWorkHoursPage.Size = new System.Drawing.Size(220, 70);
             this.btnAddWorkHoursPage.TabIndex = 3;
             this.btnAddWorkHoursPage.Text = " Work Hours";
             this.btnAddWorkHoursPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -92,10 +92,10 @@
             this.btnAllRecordsPage.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAllRecordsPage.Image = ((System.Drawing.Image) (resources.GetObject("btnAllRecordsPage.Image")));
             this.btnAllRecordsPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllRecordsPage.Location = new System.Drawing.Point(0, 140);
+            this.btnAllRecordsPage.Location = new System.Drawing.Point(0, 150);
             this.btnAllRecordsPage.Name = "btnAllRecordsPage";
             this.btnAllRecordsPage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAllRecordsPage.Size = new System.Drawing.Size(220, 60);
+            this.btnAllRecordsPage.Size = new System.Drawing.Size(220, 70);
             this.btnAllRecordsPage.TabIndex = 2;
             this.btnAllRecordsPage.Text = " Employees";
             this.btnAllRecordsPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,7 +115,7 @@
             this.btnAddRecordPage.Location = new System.Drawing.Point(0, 80);
             this.btnAddRecordPage.Name = "btnAddRecordPage";
             this.btnAddRecordPage.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAddRecordPage.Size = new System.Drawing.Size(220, 60);
+            this.btnAddRecordPage.Size = new System.Drawing.Size(220, 70);
             this.btnAddRecordPage.TabIndex = 1;
             this.btnAddRecordPage.Text = " New Employee";
             this.btnAddRecordPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

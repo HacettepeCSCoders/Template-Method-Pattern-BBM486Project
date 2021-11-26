@@ -74,7 +74,6 @@ namespace WindowsFormsApp.Forms
             this.lblTotalEmployees.TabIndex = 1;
             this.lblTotalEmployees.Text = "Total Number of Employees: ";
             this.lblTotalEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTotalEmployees.Click += new System.EventHandler(this.label1_Click);
             // 
             // EmployeesForm
             // 

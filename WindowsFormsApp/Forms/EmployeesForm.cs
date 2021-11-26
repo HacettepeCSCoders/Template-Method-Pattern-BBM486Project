@@ -34,10 +34,6 @@ namespace WindowsFormsApp.Forms
             set => _title = value;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void dataGridEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }

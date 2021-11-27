@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace DataAccess.Concrete.InMemory
 {
@@ -72,6 +73,11 @@ namespace DataAccess.Concrete.InMemory
             internToUpdate.StartDate = intern.StartDate;
             internToUpdate.EndDate = intern.EndDate;
             internToUpdate.WorkSituation = intern.WorkSituation;
+        }
+
+        public List<InternDetailDto> GetInternDetails()
+        {
+            throw new NotImplementedException();
         }
 
         public List<Intern> GetAllByMentor(int mentorId)

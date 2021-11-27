@@ -1,42 +1,48 @@
 ﻿using System.Collections.Generic;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using Service.Abstract;
 
 namespace Service.Concrete
 {
     public class UIDesignerManager:IUIDesignerService
     {
-        IUIDesignerDal _uıDesignerDal;
+        IUIDesignerDal _uiDesignerDal;
 
-        public UIDesignerManager(IUIDesignerDal uıDesignerDal)
+        public UIDesignerManager(IUIDesignerDal uiDesignerDal)
         {
-            _uıDesignerDal = uıDesignerDal;
+            _uiDesignerDal = uiDesignerDal;
         }
 
         public List<UIDesigner> GetAll()
         {
-            return _uıDesignerDal.GetAll();
+            return _uiDesignerDal.GetAll();
         }
 
-        public void Add(UIDesigner uıDesigner)
+        public List<UIDesignerDto> GetUIDesignerDetails()
         {
-            throw new System.NotImplementedException();
+            return _uiDesignerDal.GetUIDesignerDetails();
         }
 
-        public void Update(UIDesigner uıDesigner)
+        public void Add(UIDesigner uiDesigner)
         {
-            throw new System.NotImplementedException();
+            _uiDesignerDal.Add(uiDesigner);
         }
 
-        public void Delete(UIDesigner uıDesigner)
+        public void Update(UIDesigner uiDesigner)
         {
-            throw new System.NotImplementedException();
+            _uiDesignerDal.Update(uiDesigner);
         }
 
-        public UIDesigner GetById(int uıDesignerId)
+        public void Delete(UIDesigner uiDesigner)
         {
-            throw new System.NotImplementedException();
+            _uiDesignerDal.Delete(uiDesigner);
+        }
+
+        public UIDesigner GetById(int uiDesigner)
+        {
+            return _uiDesignerDal.Get(j => j.Id == uiDesigner);
         }
     }
 }

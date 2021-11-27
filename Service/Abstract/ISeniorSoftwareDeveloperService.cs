@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Service.Abstract
 {
     public interface ISeniorSoftwareDeveloperService
     {
         List<SeniorSoftwareDeveloper> GetAll();
-        
+        List<SeniorSoftwareDeveloperDto> GetSeniorSoftwareDeveloperDetails();
         void Add(SeniorSoftwareDeveloper seniorSoftwareDeveloper);
         void Update(SeniorSoftwareDeveloper seniorSoftwareDeveloper);
         void Delete(SeniorSoftwareDeveloper seniorSoftwareDeveloper);

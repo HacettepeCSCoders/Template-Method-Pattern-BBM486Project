@@ -48,6 +48,8 @@ namespace WindowsFormsApp.Forms
             this.lblUpdateHeader = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new WindowsFormsApp.CustomButton.CustomButton();
+            this.comboBoxUpdateSelectRole = new System.Windows.Forms.ComboBox();
+            this.lblUpdateSelectRole = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxUpdatePage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@ namespace WindowsFormsApp.Forms
             this.lblUpdateFirstName.BackColor = System.Drawing.SystemColors.Control;
             this.lblUpdateFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblUpdateFirstName.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblUpdateFirstName.Location = new System.Drawing.Point(212, 85);
+            this.lblUpdateFirstName.Location = new System.Drawing.Point(215, 150);
             this.lblUpdateFirstName.Name = "lblUpdateFirstName";
             this.lblUpdateFirstName.Size = new System.Drawing.Size(161, 22);
             this.lblUpdateFirstName.TabIndex = 1;
@@ -76,7 +78,7 @@ namespace WindowsFormsApp.Forms
             this.lblUpdateLastName.BackColor = System.Drawing.SystemColors.Control;
             this.lblUpdateLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblUpdateLastName.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblUpdateLastName.Location = new System.Drawing.Point(484, 85);
+            this.lblUpdateLastName.Location = new System.Drawing.Point(487, 150);
             this.lblUpdateLastName.Name = "lblUpdateLastName";
             this.lblUpdateLastName.Size = new System.Drawing.Size(161, 22);
             this.lblUpdateLastName.TabIndex = 2;
@@ -87,7 +89,7 @@ namespace WindowsFormsApp.Forms
             this.lblUpdateEmail.BackColor = System.Drawing.SystemColors.Control;
             this.lblUpdateEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblUpdateEmail.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblUpdateEmail.Location = new System.Drawing.Point(212, 169);
+            this.lblUpdateEmail.Location = new System.Drawing.Point(215, 234);
             this.lblUpdateEmail.Name = "lblUpdateEmail";
             this.lblUpdateEmail.Size = new System.Drawing.Size(161, 22);
             this.lblUpdateEmail.TabIndex = 3;
@@ -98,7 +100,7 @@ namespace WindowsFormsApp.Forms
             this.lblUpdatePhone.BackColor = System.Drawing.SystemColors.Control;
             this.lblUpdatePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblUpdatePhone.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblUpdatePhone.Location = new System.Drawing.Point(484, 169);
+            this.lblUpdatePhone.Location = new System.Drawing.Point(487, 234);
             this.lblUpdatePhone.Name = "lblUpdatePhone";
             this.lblUpdatePhone.Size = new System.Drawing.Size(161, 22);
             this.lblUpdatePhone.TabIndex = 4;
@@ -109,7 +111,7 @@ namespace WindowsFormsApp.Forms
             this.lblUpdateRole.BackColor = System.Drawing.SystemColors.Control;
             this.lblUpdateRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblUpdateRole.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblUpdateRole.Location = new System.Drawing.Point(212, 259);
+            this.lblUpdateRole.Location = new System.Drawing.Point(215, 324);
             this.lblUpdateRole.Name = "lblUpdateRole";
             this.lblUpdateRole.Size = new System.Drawing.Size(161, 22);
             this.lblUpdateRole.TabIndex = 5;
@@ -120,7 +122,7 @@ namespace WindowsFormsApp.Forms
             this.lblUpdateDate.BackColor = System.Drawing.SystemColors.Control;
             this.lblUpdateDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblUpdateDate.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblUpdateDate.Location = new System.Drawing.Point(484, 259);
+            this.lblUpdateDate.Location = new System.Drawing.Point(487, 324);
             this.lblUpdateDate.Name = "lblUpdateDate";
             this.lblUpdateDate.Size = new System.Drawing.Size(161, 22);
             this.lblUpdateDate.TabIndex = 6;
@@ -133,7 +135,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBoxUpdateFirstName.BorderSize = 2;
             this.customTextBoxUpdateFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBoxUpdateFirstName.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBoxUpdateFirstName.Location = new System.Drawing.Point(212, 111);
+            this.customTextBoxUpdateFirstName.Location = new System.Drawing.Point(215, 176);
             this.customTextBoxUpdateFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBoxUpdateFirstName.Name = "customTextBoxUpdateFirstName";
             this.customTextBoxUpdateFirstName.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
@@ -148,7 +150,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBoxUpdateLastName.BorderSize = 2;
             this.customTextBoxUpdateLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBoxUpdateLastName.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBoxUpdateLastName.Location = new System.Drawing.Point(484, 111);
+            this.customTextBoxUpdateLastName.Location = new System.Drawing.Point(487, 176);
             this.customTextBoxUpdateLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBoxUpdateLastName.Name = "customTextBoxUpdateLastName";
             this.customTextBoxUpdateLastName.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
@@ -163,7 +165,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBoxUpdateEmail.BorderSize = 2;
             this.customTextBoxUpdateEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBoxUpdateEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBoxUpdateEmail.Location = new System.Drawing.Point(212, 195);
+            this.customTextBoxUpdateEmail.Location = new System.Drawing.Point(215, 260);
             this.customTextBoxUpdateEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBoxUpdateEmail.Name = "customTextBoxUpdateEmail";
             this.customTextBoxUpdateEmail.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
@@ -178,7 +180,7 @@ namespace WindowsFormsApp.Forms
             this.customTextBoxUpdatePhone.BorderSize = 2;
             this.customTextBoxUpdatePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.customTextBoxUpdatePhone.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBoxUpdatePhone.Location = new System.Drawing.Point(484, 195);
+            this.customTextBoxUpdatePhone.Location = new System.Drawing.Point(487, 260);
             this.customTextBoxUpdatePhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextBoxUpdatePhone.Name = "customTextBoxUpdatePhone";
             this.customTextBoxUpdatePhone.Padding = new System.Windows.Forms.Padding(7, 7, 7, 10);
@@ -188,7 +190,7 @@ namespace WindowsFormsApp.Forms
             // 
             // dateTimePickerUpdateDate
             // 
-            this.dateTimePickerUpdateDate.Location = new System.Drawing.Point(484, 290);
+            this.dateTimePickerUpdateDate.Location = new System.Drawing.Point(487, 355);
             this.dateTimePickerUpdateDate.Name = "dateTimePickerUpdateDate";
             this.dateTimePickerUpdateDate.Size = new System.Drawing.Size(192, 22);
             this.dateTimePickerUpdateDate.TabIndex = 11;
@@ -196,7 +198,7 @@ namespace WindowsFormsApp.Forms
             // comboBoxUpdateRole
             // 
             this.comboBoxUpdateRole.FormattingEnabled = true;
-            this.comboBoxUpdateRole.Location = new System.Drawing.Point(212, 290);
+            this.comboBoxUpdateRole.Location = new System.Drawing.Point(215, 355);
             this.comboBoxUpdateRole.Name = "comboBoxUpdateRole";
             this.comboBoxUpdateRole.Size = new System.Drawing.Size(192, 24);
             this.comboBoxUpdateRole.TabIndex = 12;
@@ -206,7 +208,7 @@ namespace WindowsFormsApp.Forms
             this.lblUpdateHeader.BackColor = System.Drawing.SystemColors.Control;
             this.lblUpdateHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.lblUpdateHeader.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
-            this.lblUpdateHeader.Location = new System.Drawing.Point(212, 9);
+            this.lblUpdateHeader.Location = new System.Drawing.Point(215, 75);
             this.lblUpdateHeader.Name = "lblUpdateHeader";
             this.lblUpdateHeader.Size = new System.Drawing.Size(433, 22);
             this.lblUpdateHeader.TabIndex = 13;
@@ -215,7 +217,7 @@ namespace WindowsFormsApp.Forms
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(212, 45);
+            this.comboBox1.Location = new System.Drawing.Point(215, 111);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(464, 24);
             this.comboBox1.TabIndex = 14;
@@ -227,18 +229,39 @@ namespace WindowsFormsApp.Forms
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(212, 340);
+            this.btnUpdate.Location = new System.Drawing.Point(215, 405);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(464, 38);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
+            // comboBoxUpdateSelectRole
+            // 
+            this.comboBoxUpdateSelectRole.FormattingEnabled = true;
+            this.comboBoxUpdateSelectRole.Location = new System.Drawing.Point(215, 38);
+            this.comboBoxUpdateSelectRole.Name = "comboBoxUpdateSelectRole";
+            this.comboBoxUpdateSelectRole.Size = new System.Drawing.Size(464, 24);
+            this.comboBoxUpdateSelectRole.TabIndex = 17;
+            // 
+            // lblUpdateSelectRole
+            // 
+            this.lblUpdateSelectRole.BackColor = System.Drawing.SystemColors.Control;
+            this.lblUpdateSelectRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (162)));
+            this.lblUpdateSelectRole.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (42)))), ((int) (((byte) (86)))));
+            this.lblUpdateSelectRole.Location = new System.Drawing.Point(215, 2);
+            this.lblUpdateSelectRole.Name = "lblUpdateSelectRole";
+            this.lblUpdateSelectRole.Size = new System.Drawing.Size(433, 22);
+            this.lblUpdateSelectRole.TabIndex = 16;
+            this.lblUpdateSelectRole.Text = "Please select the role of employee:\r\n";
+            // 
             // UpdateEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBoxUpdateSelectRole);
+            this.Controls.Add(this.lblUpdateSelectRole);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblUpdateHeader);
@@ -260,6 +283,9 @@ namespace WindowsFormsApp.Forms
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxUpdatePage)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.ComboBox comboBoxUpdateSelectRole;
+        private System.Windows.Forms.Label lblUpdateSelectRole;
 
         private System.Windows.Forms.ComboBox comboBoxUpdateRole;
         private System.Windows.Forms.DateTimePicker dateTimePickerUpdateDate;

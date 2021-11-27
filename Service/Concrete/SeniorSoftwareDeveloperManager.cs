@@ -32,12 +32,12 @@ namespace Service.Concrete
 
         public void Update(SeniorSoftwareDeveloper seniorSoftwareDeveloper)
         {
-            _seniorSoftwareDeveloperDal.Add(seniorSoftwareDeveloper);
+            _seniorSoftwareDeveloperDal.Update(seniorSoftwareDeveloper);
         }
 
         public void Delete(SeniorSoftwareDeveloper seniorSoftwareDeveloper)
         {
-            _seniorSoftwareDeveloperDal.Add(seniorSoftwareDeveloper);
+            _seniorSoftwareDeveloperDal.Delete(seniorSoftwareDeveloper);
         }
 
         public SeniorSoftwareDeveloper GetById(int seniorSoftwareDeveloperId)

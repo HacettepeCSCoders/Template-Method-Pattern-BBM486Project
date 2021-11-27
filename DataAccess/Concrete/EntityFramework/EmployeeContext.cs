@@ -15,6 +15,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Position> Positions { get; set; }
         public DbSet<ProjectManager> ProjectManagers { get; set; }
         public DbSet<QAEngineer> QAEngineers { get; set; }
+        public DbSet<SeniorSoftwareDeveloper> SeniorSoftwareDevelopers { get; set; }
         public DbSet<SoftwareDeveloper> SoftwareDevelopers { get; set; }
         public DbSet<SystemAnalyst> SystemAnalysts { get; set; }
         public DbSet<TestEngineer> TestEngineers { get; set; }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using Service.Abstract;
 
 namespace Service.Concrete
@@ -19,24 +20,29 @@ namespace Service.Concrete
             return _softwareDeveloperDal.GetAll();
         }
 
+        public List<SoftwareDeveloperDto> GetSoftwareDeveloperDetails()
+        {
+            return _softwareDeveloperDal.GetSoftwareDeveloperDetails();
+        }
+
         public void Add(SoftwareDeveloper softwareDeveloper)
         {
-            throw new NotImplementedException();
+            _softwareDeveloperDal.Add(softwareDeveloper);
         }
 
         public void Update(SoftwareDeveloper softwareDeveloper)
         {
-            throw new NotImplementedException();
+            _softwareDeveloperDal.Update(softwareDeveloper);
         }
 
         public void Delete(SoftwareDeveloper softwareDeveloper)
         {
-            throw new NotImplementedException();
+            _softwareDeveloperDal.Delete(softwareDeveloper);
         }
 
         public SoftwareDeveloper GetById(int softwareDeveloperId)
         {
-            throw new NotImplementedException();
+            return _softwareDeveloperDal.Get(j => j.Id == softwareDeveloperId);
         }
     }
 }

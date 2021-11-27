@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using Service.Abstract;
 
 namespace Service.Concrete
@@ -22,24 +23,29 @@ namespace Service.Concrete
             return _qaEngineerDal.GetAll();
         }
 
+        public List<QAEngineerDto> GetQAEngineerDetails()
+        {
+            return _qaEngineerDal.GetQAEngineerDetails();
+        }
+
         public void Add(QAEngineer qaEngineer)
         {
-            throw new System.NotImplementedException();
+            _qaEngineerDal.Add(qaEngineer);
         }
 
         public void Update(QAEngineer qaEngineer)
         {
-            throw new System.NotImplementedException();
+            _qaEngineerDal.Update(qaEngineer);
         }
 
         public void Delete(QAEngineer qaEngineer)
         {
-            throw new System.NotImplementedException();
+            _qaEngineerDal.Delete(qaEngineer);
         }
 
         public QAEngineer GetById(int qaEngineerId)
         {
-            throw new System.NotImplementedException();
+            return _qaEngineerDal.Get(j=>j.Id==qaEngineerId);
         }
     }
 }

@@ -23,22 +23,22 @@ namespace Service.Concrete
 
         public void Add(ProjectManager projectManager)
         {
-            throw new System.NotImplementedException();
+            _projectManagerDal.Add(projectManager);
         }
 
         public void Update(ProjectManager projectManager)
         {
-            throw new System.NotImplementedException();
+            _projectManagerDal.Update(projectManager);
         }
 
         public void Delete(ProjectManager projectManager)
         {
-            throw new System.NotImplementedException();
+            _projectManagerDal.Delete(projectManager);
         }
 
         public ProjectManager GetById(int projectManagerId)
         {
-            throw new System.NotImplementedException();
+            return _projectManagerDal.Get(j=>j.Id==projectManagerId);
         }
     }
 }

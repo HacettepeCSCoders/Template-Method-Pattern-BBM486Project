@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using Service.Abstract;
 
 namespace Service.Concrete
@@ -19,24 +20,29 @@ namespace Service.Concrete
             return _systemAnalystDal.GetAll();
         }
 
+        public List<SystemAnalystDto> GetSystemAnalystDetails()
+        {
+            return _systemAnalystDal.GetSystemAnalystDetails();
+        }
+
         public void Add(SystemAnalyst systemAnalyst)
         {
-            throw new System.NotImplementedException();
+            _systemAnalystDal.Add(systemAnalyst);
         }
 
         public void Update(SystemAnalyst systemAnalyst)
         {
-            throw new System.NotImplementedException();
+            _systemAnalystDal.Update(systemAnalyst);
         }
 
         public void Delete(SystemAnalyst systemAnalyst)
         {
-            throw new System.NotImplementedException();
+            _systemAnalystDal.Delete(systemAnalyst);
         }
 
         public SystemAnalyst GetById(int systemAnalystId)
         {
-            throw new System.NotImplementedException();
+            return _systemAnalystDal.Get(j => j.Id == systemAnalystId);
         }
     }
 }

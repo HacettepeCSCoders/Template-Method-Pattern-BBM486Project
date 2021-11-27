@@ -2,6 +2,7 @@
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
+using Entities.DTOs;
 using Service.Abstract;
 
 namespace Service.Concrete
@@ -15,30 +16,34 @@ namespace Service.Concrete
             _juniorSoftwareDeveloperDal = juniorSoftwareDeveloperDal;
         }
         
-        
         public List<JuniorSoftwareDeveloper> GetAll()
         {
             return _juniorSoftwareDeveloperDal.GetAll();
         }
 
+        public List<JuniorSoftwareDeveloperDto> GetJuniorSoftwareDeveloperDetails()
+        {
+            return _juniorSoftwareDeveloperDal.GetJuniorSoftwareDeveloperDetails();
+        }
+
         public void Add(JuniorSoftwareDeveloper juniorSoftwareDeveloper)
         {
-            throw new System.NotImplementedException();
+            _juniorSoftwareDeveloperDal.Add(juniorSoftwareDeveloper);
         }
 
         public void Update(JuniorSoftwareDeveloper juniorSoftwareDeveloper)
         {
-            throw new System.NotImplementedException();
+            _juniorSoftwareDeveloperDal.Update(juniorSoftwareDeveloper);
         }
 
         public void Delete(JuniorSoftwareDeveloper juniorSoftwareDeveloper)
         {
-            throw new System.NotImplementedException();
+            _juniorSoftwareDeveloperDal.Delete(juniorSoftwareDeveloper);
         }
 
         public JuniorSoftwareDeveloper GetById(int juniorSoftwareDeveloperId)
         {
-            throw new System.NotImplementedException();
+            return _juniorSoftwareDeveloperDal.Get(j=>j.Id==juniorSoftwareDeveloperId);
         }
     }
 }

@@ -28,22 +28,23 @@ namespace Service.Concrete
 
         public void Add(Intern intern)
         {
-            throw new System.NotImplementedException();
+            _internDal.Add(intern);
         }
 
         public void Update(Intern intern)
         {
-            throw new System.NotImplementedException();
+            _internDal.Update(intern);
+
         }
 
         public void Delete(Intern intern)
         {
-            throw new System.NotImplementedException();
+            _internDal.Delete(intern);
         }
 
         public Intern GetById(int internId)
         {
-            throw new System.NotImplementedException();
+            return _internDal.Get(i=>i.Id==internId);
         }
     }
 }

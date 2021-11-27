@@ -21,5 +21,25 @@ namespace Service.Concrete
         
             return _qaEngineerDal.GetAll();
         }
+
+        public void Add(QAEngineer qaEngineer)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update(QAEngineer qaEngineer)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(QAEngineer qaEngineer)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public QAEngineer GetById(int qaEngineerId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

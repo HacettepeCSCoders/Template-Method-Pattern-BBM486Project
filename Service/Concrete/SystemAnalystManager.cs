@@ -18,5 +18,25 @@ namespace Service.Concrete
         {
             return _systemAnalystDal.GetAll();
         }
+
+        public void Add(SystemAnalyst systemAnalyst)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update(SystemAnalyst systemAnalyst)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(SystemAnalyst systemAnalyst)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public SystemAnalyst GetById(int systemAnalystId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

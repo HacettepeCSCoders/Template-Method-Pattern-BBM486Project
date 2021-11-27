@@ -19,5 +19,25 @@ namespace Service.Concrete
         {
             return _testEngineerDal.GetAll();
         }
+
+        public void Add(TestEngineer testEngineer)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update(TestEngineer testEngineer)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(TestEngineer testEngineer)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public TestEngineer GetById(int testEngineerId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

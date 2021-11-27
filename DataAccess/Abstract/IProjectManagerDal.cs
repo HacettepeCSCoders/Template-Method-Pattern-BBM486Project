@@ -6,6 +6,5 @@ namespace DataAccess.Abstract
 {
     public interface IProjectManagerDal: IEntityRepository<ProjectManager>
     {
-
     }
 }

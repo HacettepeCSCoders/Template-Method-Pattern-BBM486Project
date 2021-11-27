@@ -15,6 +15,6 @@ namespace Entities.Concrete
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string WorkSituation { get; set; }
-        public decimal Wage { get; set; }
+        public decimal? Wage { get; set; }
     }
 }

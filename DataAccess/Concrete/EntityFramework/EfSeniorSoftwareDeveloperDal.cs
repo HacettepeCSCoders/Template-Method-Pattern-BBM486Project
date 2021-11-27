@@ -6,29 +6,31 @@ using Core.DataAccess.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfSoftwareDeveloperDal : EfEntityRepositoryBase<SoftwareDeveloper,EmployeeContext>,ISoftwareDeveloperDal
+    public class EfSeniorSoftwareDeveloperDal: EfEntityRepositoryBase<SeniorSoftwareDeveloper,EmployeeContext>,ISeniorSoftwareDeveloperDal
     {
-        public List<SoftwareDeveloperDto> GetSoftwareDeveloperDetails()
+        public List<SeniorSoftwareDeveloperDto> GetSeniorSoftwareDeveloperDetails()
         {
             using (EmployeeContext context = new EmployeeContext())
             {
-                var result = from s in context.SoftwareDevelopers
-                    join se in context.SeniorSoftwareDevelopers
-                        on s.SeniorId equals se.Id
-                    select new SoftwareDeveloperDto()
+                var result = from s in context.SeniorSoftwareDevelopers
+                    join p in context.ProjectManagers
+                        on s.ManagerId equals p.Id
+                    select new SeniorSoftwareDeveloperDto()
                     {
                         Id = s.Id,
-                        SeniorId = se.Id,
+                        ManagerId = p.Id,
                         FirstName = s.FirstName,
                         LastName = s.LastName,
-                        SeniorName = se.FirstName + " " + se.LastName,
+                        ManagerName = p.FirstName + " " + p.LastName,
                         Wage = s.Wage.Value
                     };
                 return result.ToList();
-            }        
+            }
         }
     }
 }

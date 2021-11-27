@@ -23,7 +23,7 @@ namespace DataAccess.Concrete.EntityFramework
                         FirstName = j.FirstName,
                         LastName = j.LastName,
                         SeniorName = s.FirstName + " " + s.LastName,
-                        Wage = j.Wage
+                        Wage = j.Wage.Value
                     };
                 return result.ToList();
             }

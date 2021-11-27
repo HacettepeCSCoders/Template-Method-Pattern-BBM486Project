@@ -1,72 +1,53 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
+using Service.Concrete;
 
-public class emp
-{
-    public string name { get; set; }
-    public string surname { get; set; }
-    public string mail { get; set; }
-    public string phone { get; set; }
-    public string role { get; set; }
-    public emp(string name, string surname, string mail, string phone, string role)
-    {
-        this.name = name;
-        this.surname = surname;
-        this.mail = mail;
-        this.phone = phone;
-        this.role = role;
-    }
-}
 namespace WindowsFormsApp.Forms
 {
     public partial class EmployeesForm : Form
     {
-        private static string _title = "EMPLOYEES";
         
+        InternManager _internManager = new InternManager(new EfInternDal());
+        JuniorSoftwareDeveloperManager _juniorSoftwareDeveloperManager = new JuniorSoftwareDeveloperManager(new EfJuniorSoftwareDeveloperDal());
+        ProjectManagerManager _projectManager = new ProjectManagerManager(new EfProjectManagerDal());
+        QAEngineerManager _qaEngineerManager = new QAEngineerManager(new EfQAEngineerDal());
+        SeniorSoftwareDeveloperManager _seniorSoftwareDeveloperManager = new SeniorSoftwareDeveloperManager(new EfSeniorSoftwareDeveloperDal());
+        SoftwareDeveloperManager _softwareDeveloperManager = new SoftwareDeveloperManager(new EfSoftwareDeveloperDal());
+        SystemAnalystManager _systemAnalystManager = new SystemAnalystManager(new EfSystemAnalystDal());
+        TestEngineerManager _testEngineerManager = new TestEngineerManager(new EfTestEngineerDal());
+        UIDesignerManager _uiDesignerManager = new UIDesignerManager(new EfUIDesignerDal());
+        
+        
+        private static string _title = "EMPLOYEES";
+
+
+        public ArrayList getAllEmployee()
+        {
+            ArrayList arrEmp = new ArrayList();
+            ArrayList emps = new ArrayList();
+
+            arrEmp.AddRange(_projectManager.GetAll());
+            // arrEmp.AddRange(_qaEngineerManager.GetAll());
+            // arrEmp.AddRange(_uiDesignerManager.GetAll());
+            // arrEmp.AddRange(_testEngineerManager.GetAll());
+            // arrEmp.AddRange(_systemAnalystManager.GetAll());
+            // arrEmp.AddRange(_seniorSoftwareDeveloperManager.GetAll());
+            // arrEmp.AddRange(_seniorSoftwareDeveloperManager.GetAll());
+            // arrEmp.AddRange(_softwareDeveloperManager.GetAll());
+            // arrEmp.AddRange(_juniorSoftwareDeveloperManager.GetAll());
+            // arrEmp.AddRange(_internManager.GetAll());
+            return arrEmp;
+        }
         public EmployeesForm()
         {
             InitializeComponent();
         }
-        ArrayList arrEmp = new ArrayList()
-            {
-                new emp("burak","daglar","burak@gmail.com","5555555555","junior"),
-                new emp("uqi", "erdo*an", "uqi@outlook.com", "7777777777", "cleaner"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("alpic", "ısıldak", "alperensudagezen@gmail.com", "2222222222", "proj manager :D"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master"),
-                new emp("furquark", "wolf", "furquark@gmail.com", "1111111111", "frontend master")
-                
-                
-            };
-
+        
         public static string Title
         {
             get => _title;
@@ -89,10 +70,10 @@ namespace WindowsFormsApp.Forms
                 {
                     if (DialogResult.OK == MessageBox.Show("Are You Sure?","delete",MessageBoxButtons.OKCancel))
                     {
-                        arrEmp.RemoveAt(e.RowIndex);
+                        getAllEmployee().RemoveAt(e.RowIndex);
                         dataGridEmployees.DataSource = null;
                         dataGridEmployees.Columns.Clear();
-                        dataGridEmployees.DataSource = arrEmp;
+                        dataGridEmployees.DataSource = getAllEmployee();
                         dataGridEmployees.Columns.Add(deleteButtonCreator());
                         
                         lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
@@ -104,7 +85,7 @@ namespace WindowsFormsApp.Forms
         private void EmployeesForm_Load(object sender, EventArgs e)
         {
             
-            dataGridEmployees.DataSource = arrEmp;
+            dataGridEmployees.DataSource = getAllEmployee();
             
             var height = 40;
             foreach (DataGridViewRow row in dataGridEmployees.Rows)

@@ -20,5 +20,25 @@ namespace Service.Concrete
         {
             return _projectManagerDal.GetAll();
         }
+
+        public void Add(ProjectManager projectManager)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update(ProjectManager projectManager)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(ProjectManager projectManager)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public ProjectManager GetById(int projectManagerId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

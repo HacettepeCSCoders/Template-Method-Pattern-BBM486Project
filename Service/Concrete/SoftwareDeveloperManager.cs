@@ -18,5 +18,25 @@ namespace Service.Concrete
         {
             return _softwareDeveloperDal.GetAll();
         }
+
+        public void Add(SoftwareDeveloper softwareDeveloper)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(SoftwareDeveloper softwareDeveloper)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(SoftwareDeveloper softwareDeveloper)
+        {
+            throw new NotImplementedException();
+        }
+
+        public SoftwareDeveloper GetById(int softwareDeveloperId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

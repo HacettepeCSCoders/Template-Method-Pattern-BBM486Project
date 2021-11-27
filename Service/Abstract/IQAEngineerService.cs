@@ -8,5 +8,10 @@ namespace Service.Abstract
     {
         
         List<QAEngineer> GetAll();
+        
+        void Add(QAEngineer qaEngineer);
+        void Update(QAEngineer qaEngineer);
+        void Delete(QAEngineer qaEngineer); 
+        QAEngineer GetById(int qaEngineerId);
     }
 }

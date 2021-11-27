@@ -18,5 +18,25 @@ namespace Service.Concrete
         { 
             return _seniorSoftwareDeveloperDal.GetAll();
         }
+
+        public void Add(SeniorSoftwareDeveloper seniorSoftwareDeveloper)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update(SeniorSoftwareDeveloper seniorSoftwareDeveloper)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(SeniorSoftwareDeveloper seniorSoftwareDeveloper)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public SeniorSoftwareDeveloper GetById(int seniorSoftwareDeveloperId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

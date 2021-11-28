@@ -10,6 +10,7 @@ namespace Service.Concrete
     public class InternManager:IInternService
     {
         IInternDal _internDal;
+        private InternWageCalculator _internWageCalculator = new InternWageCalculator();
 
         public InternManager(IInternDal internDal)
         {

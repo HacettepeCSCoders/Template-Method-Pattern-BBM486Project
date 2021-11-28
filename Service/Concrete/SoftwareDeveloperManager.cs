@@ -11,6 +11,9 @@ namespace Service.Concrete
     {
         ISoftwareDeveloperDal _softwareDeveloperDal;
 
+        private SoftwareDeveloperWageCalculator
+            _softwareDeveloperWageCalculator = new SoftwareDeveloperWageCalculator();
+
         public SoftwareDeveloperManager(ISoftwareDeveloperDal softwareDeveloperDal)
         {
             _softwareDeveloperDal = softwareDeveloperDal;

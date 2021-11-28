@@ -17,7 +17,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from s in context.SystemAnalysts
                     join p in context.ProjectManagers
-                        on s.ManagerId equals p.Id
+                        on s.ManagerId.Value equals p.Id
                     select new SystemAnalystDto()
                     {
                         Id = s.Id,

@@ -9,7 +9,8 @@ namespace Service.Concrete
     public class TestEngineerManager:ITestEngineerService
     { 
         ITestEngineerDal _testEngineerDal;
-
+        private TestEngineerWageCalculator _testEngineerWageCalculator = new TestEngineerWageCalculator();
+        
         public TestEngineerManager(ITestEngineerDal testEngineerDal)
         {
             _testEngineerDal = testEngineerDal;

@@ -15,7 +15,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from j in context.JuniorSoftwareDevelopers
                     join s in context.SeniorSoftwareDevelopers
-                        on j.SeniorId equals s.Id
+                        on j.SeniorId.Value equals s.Id
                     select new JuniorSoftwareDeveloperDto
                     {
                         Id = j.Id,

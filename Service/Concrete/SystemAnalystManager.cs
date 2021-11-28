@@ -9,6 +9,7 @@ namespace Service.Concrete
     public class SystemAnalystManager:ISystemAnalystService
     { 
         ISystemAnalystDal _systemAnalystDal;
+        private SystemAnalystWageCalculator _systemAnalystWageCalculator = new SystemAnalystWageCalculator();
 
         public SystemAnalystManager(ISystemAnalystDal systemAnalystDal)
         {

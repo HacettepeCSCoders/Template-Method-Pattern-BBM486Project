@@ -11,6 +11,7 @@ namespace WindowsFormsApp.Forms
     public partial class UpdateEmployeeForm : Form
     {
         private static string _title = "UPDATE EMPLOYEE";
+
         InternManager _internManager = new InternManager(new EfInternDal());
 
         JuniorSoftwareDeveloperManager _juniorSoftwareDeveloperManager =
@@ -41,21 +42,12 @@ namespace WindowsFormsApp.Forms
 
         private void UpdateEmployeeForm_Load(object sender, EventArgs e)
         {
-            comboBoxUpdateSelectRole.SelectedIndex = -1;
-            comboBox1.SelectedIndex = -1;
-            ArrayList arr1 = new ArrayList();
-            foreach (var var1 in _efPositionDal.GetAll())
-            {
-                arr1.Add(var1.PositionName);
-            }
-
-            comboBoxUpdateSelectRole.DataSource = arr1;
+            
 
         }
 
         private void comboBoxUpdateSelectRole_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(comboBoxUpdateSelectRole.Text);
             if (comboBoxUpdateSelectRole.Text.Equals("Intern"))
             {
                 ArrayList arr1 = new ArrayList();
@@ -190,7 +182,19 @@ namespace WindowsFormsApp.Forms
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
                 }
-
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    intern1.MentorId = Convert.ToInt32(textBox6.Text);
+                }
+                
                 _internManager.Update(intern1);
             }
             else if (comboBoxUpdateSelectRole.Text.Equals("Junior Software Developer"))
@@ -216,7 +220,18 @@ namespace WindowsFormsApp.Forms
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
                 }
-
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    intern1.SeniorId = Convert.ToInt32(textBox6.Text);
+                }
                 _juniorSoftwareDeveloperManager.Update(intern1);
             }
             else if (comboBoxUpdateSelectRole.Text.Equals("Software Developer"))
@@ -241,6 +256,18 @@ namespace WindowsFormsApp.Forms
                 if (!string.IsNullOrEmpty(textBox4.Text))
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
+                }
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    intern1.SeniorId = Convert.ToInt32(textBox6.Text);
                 }
 
                 _softwareDeveloperManager.Update(intern1);
@@ -267,7 +294,18 @@ namespace WindowsFormsApp.Forms
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
                 }
-
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    intern1.ManagerId = Convert.ToInt32(textBox6.Text);
+                }
                 _seniorSoftwareDeveloperManager.Update(intern1);
             }
             else if (comboBoxUpdateSelectRole.Text.Equals("QA Engineer"))
@@ -292,7 +330,18 @@ namespace WindowsFormsApp.Forms
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
                 }
-
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    intern1.ManagerId = Convert.ToInt32(textBox6.Text);
+                }
                 _qaEngineerManager.Update(intern1);
             }
             else if (comboBoxUpdateSelectRole.Text.Equals("Test Engineer"))
@@ -316,6 +365,18 @@ namespace WindowsFormsApp.Forms
                 if (!string.IsNullOrEmpty(textBox4.Text))
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
+                }
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    intern1.ManagerId = Convert.ToInt32(textBox6.Text);
                 }
 
                 _testEngineerManager.Update(intern1);
@@ -342,7 +403,18 @@ namespace WindowsFormsApp.Forms
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
                 }
-
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    intern1.ManagerId = Convert.ToInt32(textBox6.Text);
+                }
                 _systemAnalystManager.Update(intern1);
             }
             else if (comboBoxUpdateSelectRole.Text.Equals("Project Manager"))
@@ -366,6 +438,14 @@ namespace WindowsFormsApp.Forms
                 if (!string.IsNullOrEmpty(textBox4.Text))
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
+                }
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
                 }
 
                 _projectManagerManager.Update(intern1);
@@ -392,7 +472,18 @@ namespace WindowsFormsApp.Forms
                 {
                     intern1.Phone = Convert.ToInt64(textBox4.Text);
                 }
-
+                if (!string.IsNullOrEmpty(textBox7.Text))
+                {
+                    intern1.Address = textBox7.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox5.Text))
+                {
+                    intern1.WorkSituation = textBox4.Text;
+                }
+                if (!string.IsNullOrEmpty(textBox6.Text))
+                {
+                    intern1.ManagerId = Convert.ToInt32(textBox6.Text);
+                }
                 _uiDesignerManager.Update(intern1);
             }
             else

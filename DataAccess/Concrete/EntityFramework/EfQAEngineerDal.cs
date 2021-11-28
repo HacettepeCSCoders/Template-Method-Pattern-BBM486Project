@@ -18,7 +18,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from q in context.QAEngineers
                     join p in context.ProjectManagers
-                        on q.ManagerId equals p.Id
+                        on q.ManagerId.Value equals p.Id
                     select new QAEngineerDto()
                     {
                         Id = q.Id,

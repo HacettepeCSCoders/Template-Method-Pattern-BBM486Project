@@ -9,7 +9,8 @@ namespace Service.Concrete
     public class UIDesignerManager:IUIDesignerService
     {
         IUIDesignerDal _uiDesignerDal;
-
+        private UIDesignerWageCalculator _uiDesignerWageCalculator = new UIDesignerWageCalculator();
+        
         public UIDesignerManager(IUIDesignerDal uiDesignerDal)
         {
             _uiDesignerDal = uiDesignerDal;

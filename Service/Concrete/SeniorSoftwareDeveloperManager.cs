@@ -10,6 +10,9 @@ namespace Service.Concrete
     {
         ISeniorSoftwareDeveloperDal _seniorSoftwareDeveloperDal;
 
+        private SeniorSoftwareDeveloperWageCalculator _seniorSoftwareDeveloperWageCalculator =
+            new SeniorSoftwareDeveloperWageCalculator();
+        
         public SeniorSoftwareDeveloperManager(ISeniorSoftwareDeveloperDal seniorSoftwareDeveloperDal)
         {
             _seniorSoftwareDeveloperDal = seniorSoftwareDeveloperDal;

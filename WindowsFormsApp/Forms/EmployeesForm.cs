@@ -5,110 +5,324 @@ using System.Linq;
 using System.Windows.Forms;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using Entities.DTOs;
 using Service.Concrete;
 
 namespace WindowsFormsApp.Forms
 {
     public partial class EmployeesForm : Form
     {
-        
+
         InternManager _internManager = new InternManager(new EfInternDal());
-        JuniorSoftwareDeveloperManager _juniorSoftwareDeveloperManager = new JuniorSoftwareDeveloperManager(new EfJuniorSoftwareDeveloperDal());
-        ProjectManagerManager _projectManager = new ProjectManagerManager(new EfProjectManagerDal());
+
+        JuniorSoftwareDeveloperManager _juniorSoftwareDeveloperManager =
+            new JuniorSoftwareDeveloperManager(new EfJuniorSoftwareDeveloperDal());
+
+        ProjectManagerManager _projectManagerManager = new ProjectManagerManager(new EfProjectManagerDal());
         QAEngineerManager _qaEngineerManager = new QAEngineerManager(new EfQAEngineerDal());
-        SeniorSoftwareDeveloperManager _seniorSoftwareDeveloperManager = new SeniorSoftwareDeveloperManager(new EfSeniorSoftwareDeveloperDal());
+
+        SeniorSoftwareDeveloperManager _seniorSoftwareDeveloperManager =
+            new SeniorSoftwareDeveloperManager(new EfSeniorSoftwareDeveloperDal());
+
         SoftwareDeveloperManager _softwareDeveloperManager = new SoftwareDeveloperManager(new EfSoftwareDeveloperDal());
         SystemAnalystManager _systemAnalystManager = new SystemAnalystManager(new EfSystemAnalystDal());
         TestEngineerManager _testEngineerManager = new TestEngineerManager(new EfTestEngineerDal());
         UIDesignerManager _uiDesignerManager = new UIDesignerManager(new EfUIDesignerDal());
-        
-        
-        private static string _title = "EMPLOYEES";
+        private EfPositionDal _efPositionDal = new EfPositionDal();
 
 
-        public ArrayList getAllEmployee()
-        {
-            ArrayList arrEmp = new ArrayList();
-            ArrayList emps = new ArrayList();
+        private static string _title = "SHOW / DELETE EMPLOYEES";
 
-            arrEmp.AddRange(_projectManager.GetAll());
-            // arrEmp.AddRange(_qaEngineerManager.GetAll());
-            // arrEmp.AddRange(_uiDesignerManager.GetAll());
-            // arrEmp.AddRange(_testEngineerManager.GetAll());
-            // arrEmp.AddRange(_systemAnalystManager.GetAll());
-            // arrEmp.AddRange(_seniorSoftwareDeveloperManager.GetAll());
-            // arrEmp.AddRange(_seniorSoftwareDeveloperManager.GetAll());
-            // arrEmp.AddRange(_softwareDeveloperManager.GetAll());
-            // arrEmp.AddRange(_juniorSoftwareDeveloperManager.GetAll());
-            // arrEmp.AddRange(_internManager.GetAll());
-            return arrEmp;
-        }
         public EmployeesForm()
         {
             InitializeComponent();
         }
-        
+
+        ArrayList arr1 = new ArrayList();
+
         public static string Title
         {
             get => _title;
             set => _title = value;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void dataGridEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            {
-                //if click is on new row or header row
-                if( e.RowIndex == dataGridEmployees.NewRowIndex || e.RowIndex < 0)
-                    return;
-
-                //Check if click is on specific column 
-                if( e.ColumnIndex  == dataGridEmployees.Columns["dataGridViewDeleteButton"].Index)
-                {
-                    if (DialogResult.OK == MessageBox.Show("Are You Sure?","delete",MessageBoxButtons.OKCancel))
-                    {
-                        getAllEmployee().RemoveAt(e.RowIndex);
-                        dataGridEmployees.DataSource = null;
-                        dataGridEmployees.Columns.Clear();
-                        dataGridEmployees.DataSource = getAllEmployee();
-                        dataGridEmployees.Columns.Add(deleteButtonCreator());
-                        
-                        lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
-                    }
-                }
-            }
-        }
 
         private void EmployeesForm_Load(object sender, EventArgs e)
         {
-            
-            dataGridEmployees.DataSource = getAllEmployee();
-            
+            comboBox1.SelectedIndex = -1;
+            ArrayList arr2 = new ArrayList();
+            foreach (var var1 in _efPositionDal.GetAll())
+            {
+                arr2.Add(var1.PositionName);
+            }
+
+            comboBox1.DataSource = arr2;
+
             var height = 40;
             foreach (DataGridViewRow row in dataGridEmployees.Rows)
             {
-                if(row.Visible)
+                if (row.Visible)
                     height += row.Height;
             }
+
             if (height > 317)
                 height = 317;
             dataGridEmployees.Height = height;
-            
-            dataGridEmployees.Columns.Add(deleteButtonCreator());
             lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
         }
+        
 
-        private DataGridViewButtonColumn deleteButtonCreator()
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var deleteButton=new DataGridViewButtonColumn();
-            deleteButton.Name="dataGridViewDeleteButton";
-            deleteButton.HeaderText="Delete";
-            deleteButton.Text="Delete";
-            deleteButton.UseColumnTextForButtonValue=true;
-            return deleteButton;
-        } 
+            if (comboBox1.Text.Equals("Intern"))
+            {                
+                ArrayList arr1 = new ArrayList();
+
+                foreach (Intern var1 in _internManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Junior Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (JuniorSoftwareDeveloper var1 in _juniorSoftwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (SoftwareDeveloper var1 in _softwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Senior Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (SeniorSoftwareDeveloper var1 in _seniorSoftwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("QA Engineer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (QAEngineer var1 in _qaEngineerManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Test Engineer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (TestEngineer var1 in _testEngineerManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("System Analyst"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (SystemAnalyst var1 in _systemAnalystManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Project Manager"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (ProjectManager var1 in _projectManagerManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("UI Designer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (UIDesigner var1 in _uiDesignerManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else
+            {
+                dataGridEmployees.Text = "NOT FOUND";
+            }
+            lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
+        }
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBox1.Text);
+            if (comboBox1.Text.Equals("Intern"))
+            {
+                var internToDelete = _internManager.GetById(id);
+                _internManager.Delete(internToDelete);
+            }
+            else if (comboBox1.Text.Equals("Junior Software Developer"))
+            {
+                var internToDelete = _juniorSoftwareDeveloperManager.GetById(id);
+                _juniorSoftwareDeveloperManager.Delete(internToDelete);
+            }
+            else if (comboBox1.Text.Equals("Software Developer"))
+            {
+                var internToDelete = _softwareDeveloperManager.GetById(id);
+                _softwareDeveloperManager.Delete(internToDelete);
+            }
+            else if (comboBox1.Text.Equals("Senior Software Developer"))
+            {
+                var internToDelete = _seniorSoftwareDeveloperManager.GetById(id);
+                _seniorSoftwareDeveloperManager.Delete(internToDelete);
+            }
+            else if (comboBox1.Text.Equals("Project Manager"))
+            {
+                var internToDelete = _projectManagerManager.GetById(id);
+                _projectManagerManager.Delete(internToDelete);
+            }
+            else if (comboBox1.Text.Equals("Test Engineer"))
+            {
+                var internToDelete = _testEngineerManager.GetById(id);
+                _testEngineerManager.Delete(internToDelete);
+            }
+            else if (comboBox1.Text.Equals("QA Engineer"))
+            {
+                var internToDelete = _qaEngineerManager.GetById(id);
+                _qaEngineerManager.Delete(internToDelete);
+            }
+            else if (comboBox1.Text.Equals("System Analyst"))
+            {
+                var internToDelete = _systemAnalystManager.GetById(id);
+                _systemAnalystManager.Delete(internToDelete);
+            }
+            else if (comboBox1.Text.Equals("UI Designer"))
+            {
+                var internToDelete = _uiDesignerManager.GetById(id);
+                _uiDesignerManager.Delete(internToDelete);
+            }
+            else
+            {
+                MessageBox.Show("HATA");
+            }
+             if (comboBox1.Text.Equals("Intern"))
+            {                
+                ArrayList arr1 = new ArrayList();
+
+                foreach (Intern var1 in _internManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Junior Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (JuniorSoftwareDeveloper var1 in _juniorSoftwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (SoftwareDeveloper var1 in _softwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Senior Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (SeniorSoftwareDeveloper var1 in _seniorSoftwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("QA Engineer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (QAEngineer var1 in _qaEngineerManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Test Engineer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (TestEngineer var1 in _testEngineerManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("System Analyst"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (SystemAnalyst var1 in _systemAnalystManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("Project Manager"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (ProjectManager var1 in _projectManagerManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else if (comboBox1.Text.Equals("UI Designer"))
+            {
+                ArrayList arr1 = new ArrayList();
+                foreach (UIDesigner var1 in _uiDesignerManager.GetAll())
+                {
+                    arr1.Add(var1);
+                }
+
+                dataGridEmployees.DataSource = arr1;
+            }
+            else
+            {
+                dataGridEmployees.Text = "NOT FOUND";
+            }
+            lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
+        }
+        
     }
 }
+

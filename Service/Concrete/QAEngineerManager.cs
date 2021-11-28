@@ -9,7 +9,7 @@ namespace Service.Concrete
     public class QAEngineerManager:IQAEngineerService
     {
         IQAEngineerDal _qaEngineerDal;
-
+        private QAEngineerWageCalculator _qaEngineerWageCalculator = new QAEngineerWageCalculator();
         public QAEngineerManager(IQAEngineerDal qaEngineerDal)
         {
         

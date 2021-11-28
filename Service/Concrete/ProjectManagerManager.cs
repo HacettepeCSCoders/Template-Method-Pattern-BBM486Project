@@ -10,7 +10,8 @@ namespace Service.Concrete
     public class ProjectManagerManager:IProjectManagerService
     {
         IProjectManagerDal _projectManagerDal;
-
+        private ProjectManagerWageCalculator _projectManagerWageCalculator = new ProjectManagerWageCalculator();
+        
         public ProjectManagerManager(IProjectManagerDal projectManagerDal)
         {
             _projectManagerDal = projectManagerDal;

@@ -11,6 +11,9 @@ namespace Service.Concrete
     {
         IJuniorSoftwareDeveloperDal _juniorSoftwareDeveloperDal;
 
+        private JuniorSoftwareDeveloperWageCalculator _juniorSoftwareDeveloperWageCalculator =
+            new JuniorSoftwareDeveloperWageCalculator();
+
         public JuniorSoftwareDeveloperManager(IJuniorSoftwareDeveloperDal juniorSoftwareDeveloperDal)
         {
             _juniorSoftwareDeveloperDal = juniorSoftwareDeveloperDal;

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using DataAccess.Abstract;
-using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using Entities.DTOs;
 using Service.Abstract;
+using Service.Abstract.Services;
 
-namespace Service.Concrete
+namespace Service.Concrete.Managers
 {
     public class InternManager:IInternService
     {
@@ -46,6 +46,12 @@ namespace Service.Concrete
         public Intern GetById(int internId)
         {
             return _internDal.Get(i=>i.Id==internId);
+        }
+
+        public void UpdateWage(Intern intern, int workHour)
+        {
+            intern.Wage = _internWageCalculator.Calculate(workHour);
+            _internDal.Update(intern);
         }
     }
 }

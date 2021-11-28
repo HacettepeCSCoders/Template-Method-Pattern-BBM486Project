@@ -7,6 +7,7 @@ using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Entities.DTOs;
 using Service.Concrete;
+using Service.Concrete.Managers;
 
 namespace WindowsFormsApp.Forms
 {
@@ -175,57 +176,74 @@ namespace WindowsFormsApp.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox1.Text);
-            if (comboBox1.Text.Equals("Intern"))
+
+            if (string.IsNullOrEmpty(textBox1.Text))
             {
-                var internToDelete = _internManager.GetById(id);
-                _internManager.Delete(internToDelete);
-            }
-            else if (comboBox1.Text.Equals("Junior Software Developer"))
-            {
-                var internToDelete = _juniorSoftwareDeveloperManager.GetById(id);
-                _juniorSoftwareDeveloperManager.Delete(internToDelete);
-            }
-            else if (comboBox1.Text.Equals("Software Developer"))
-            {
-                var internToDelete = _softwareDeveloperManager.GetById(id);
-                _softwareDeveloperManager.Delete(internToDelete);
-            }
-            else if (comboBox1.Text.Equals("Senior Software Developer"))
-            {
-                var internToDelete = _seniorSoftwareDeveloperManager.GetById(id);
-                _seniorSoftwareDeveloperManager.Delete(internToDelete);
-            }
-            else if (comboBox1.Text.Equals("Project Manager"))
-            {
-                var internToDelete = _projectManagerManager.GetById(id);
-                _projectManagerManager.Delete(internToDelete);
-            }
-            else if (comboBox1.Text.Equals("Test Engineer"))
-            {
-                var internToDelete = _testEngineerManager.GetById(id);
-                _testEngineerManager.Delete(internToDelete);
-            }
-            else if (comboBox1.Text.Equals("QA Engineer"))
-            {
-                var internToDelete = _qaEngineerManager.GetById(id);
-                _qaEngineerManager.Delete(internToDelete);
-            }
-            else if (comboBox1.Text.Equals("System Analyst"))
-            {
-                var internToDelete = _systemAnalystManager.GetById(id);
-                _systemAnalystManager.Delete(internToDelete);
-            }
-            else if (comboBox1.Text.Equals("UI Designer"))
-            {
-                var internToDelete = _uiDesignerManager.GetById(id);
-                _uiDesignerManager.Delete(internToDelete);
+                MessageBox.Show("ENTER A VALID ID!","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
             }
             else
             {
-                MessageBox.Show("HATA");
+                 int id = Convert.ToInt32(textBox1.Text);
+            
+            try
+            {
+                if (comboBox1.Text.Equals("Intern"))
+                {
+                    var internToDelete = _internManager.GetById(id);
+                    _internManager.Delete(internToDelete);
+                }
+                else if (comboBox1.Text.Equals("Junior Software Developer"))
+                {
+                    var internToDelete = _juniorSoftwareDeveloperManager.GetById(id);
+                    _juniorSoftwareDeveloperManager.Delete(internToDelete);
+                }
+                else if (comboBox1.Text.Equals("Software Developer"))
+                {
+                    var internToDelete = _softwareDeveloperManager.GetById(id);
+                    _softwareDeveloperManager.Delete(internToDelete);
+                }
+                else if (comboBox1.Text.Equals("Senior Software Developer"))
+                {
+                    var internToDelete = _seniorSoftwareDeveloperManager.GetById(id);
+                    _seniorSoftwareDeveloperManager.Delete(internToDelete);
+                }
+                else if (comboBox1.Text.Equals("Project Manager"))
+                {
+                    var internToDelete = _projectManagerManager.GetById(id);
+                    _projectManagerManager.Delete(internToDelete);
+                }
+                else if (comboBox1.Text.Equals("Test Engineer"))
+                {
+                    var internToDelete = _testEngineerManager.GetById(id);
+                    _testEngineerManager.Delete(internToDelete);
+                }
+                else if (comboBox1.Text.Equals("QA Engineer"))
+                {
+                    var internToDelete = _qaEngineerManager.GetById(id);
+                    _qaEngineerManager.Delete(internToDelete);
+                }
+                else if (comboBox1.Text.Equals("System Analyst"))
+                {
+                    var internToDelete = _systemAnalystManager.GetById(id);
+                    _systemAnalystManager.Delete(internToDelete);
+                }
+                else if (comboBox1.Text.Equals("UI Designer"))
+                {
+                    var internToDelete = _uiDesignerManager.GetById(id);
+                    _uiDesignerManager.Delete(internToDelete);
+                }
+
+                MessageBox.Show("Employee DELETED !");
+                textBox1.Text = String.Empty;
             }
-             if (comboBox1.Text.Equals("Intern"))
+            catch (Exception exception)
+            {
+                MessageBox.Show("ERROR","DELETION ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            finally
+            {
+                 if (comboBox1.Text.Equals("Intern"))
             {                
                 ArrayList arr1 = new ArrayList();
 
@@ -321,8 +339,9 @@ namespace WindowsFormsApp.Forms
                 dataGridEmployees.Text = "NOT FOUND";
             }
             lblTotalEmployees.Text = $"Total Number of Employees: {dataGridEmployees.RowCount}";
+            }
+            }
         }
-        
     }
 }
 

@@ -3,8 +3,9 @@ using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
 using Service.Abstract;
+using Service.Abstract.Services;
 
-namespace Service.Concrete
+namespace Service.Concrete.Managers
 {
     public class SeniorSoftwareDeveloperManager:ISeniorSoftwareDeveloperService
     {
@@ -46,6 +47,11 @@ namespace Service.Concrete
         public SeniorSoftwareDeveloper GetById(int seniorSoftwareDeveloperId)
         {
             return _seniorSoftwareDeveloperDal.Get(j=>j.Id==seniorSoftwareDeveloperId);
+        }
+        public void UpdateWage(SeniorSoftwareDeveloper seniorSoftwareDeveloper, int workHour)
+        {
+            seniorSoftwareDeveloper.Wage = _seniorSoftwareDeveloperWageCalculator.Calculate(workHour);
+            _seniorSoftwareDeveloperDal.Update(seniorSoftwareDeveloper);
         }
     }
 }

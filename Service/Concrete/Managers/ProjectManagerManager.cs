@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using DataAccess.Abstract;
-using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using Service.Abstract;
+using Service.Abstract.Services;
 
-namespace Service.Concrete
+namespace Service.Concrete.Managers
 {
     
     public class ProjectManagerManager:IProjectManagerService
@@ -40,6 +40,11 @@ namespace Service.Concrete
         public ProjectManager GetById(int projectManagerId)
         {
             return _projectManagerDal.Get(j=>j.Id==projectManagerId);
+        }
+        public void UpdateWage(ProjectManager projectManager, int workHour)
+        {
+            projectManager.Wage = _projectManagerWageCalculator.Calculate(workHour);
+            _projectManagerDal.Update(projectManager);
         }
     }
 }

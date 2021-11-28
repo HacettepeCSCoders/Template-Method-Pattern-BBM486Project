@@ -4,14 +4,22 @@ namespace Service.Concrete
 {
     public class ProjectManagerWageCalculator:AbstractWageCalculator
     {
-        public override decimal BonusShare(decimal wage, int rate = 0)
+        public override decimal BonusShare(decimal wage)
         {
-            throw new System.NotImplementedException();
+            wage += wage * 300 / 100;
+            return wage;
         }
 
-        public override decimal AdditionalShift(int workHour = 0)
+        public override decimal AdditionalShift(decimal wage, int workHour = 0)
         {
-            throw new System.NotImplementedException();
+            if (workHour > 160)
+            {
+                int addition = workHour - 160;
+                wage += addition * 80;
+                return wage;
+            }
+
+            return wage;
         }
     }
 }

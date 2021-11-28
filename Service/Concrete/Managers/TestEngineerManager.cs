@@ -3,8 +3,9 @@ using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
 using Service.Abstract;
+using Service.Abstract.Services;
 
-namespace Service.Concrete
+namespace Service.Concrete.Managers
 {
     public class TestEngineerManager:ITestEngineerService
     { 
@@ -45,6 +46,11 @@ namespace Service.Concrete
         public TestEngineer GetById(int testEngineerId)
         {
             return _testEngineerDal.Get(j => j.Id == testEngineerId);
+        }
+        public void UpdateWage(TestEngineer testEngineer, int workHour)
+        {
+            testEngineer.Wage = _testEngineerWageCalculator.Calculate(workHour);
+            _testEngineerDal.Update(testEngineer);
         }
     }
 }

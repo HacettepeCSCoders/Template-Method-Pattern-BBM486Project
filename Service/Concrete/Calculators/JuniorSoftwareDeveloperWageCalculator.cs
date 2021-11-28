@@ -4,14 +4,15 @@ namespace Service.Concrete
 {
     public class JuniorSoftwareDeveloperWageCalculator:AbstractWageCalculator
     {
-        public override decimal BonusShare(decimal wage, int rate = 0)
+        public override decimal BonusShare(decimal wage)
         {
-            throw new System.NotImplementedException();
+            wage += wage * 50 / 100;
+            return wage;
         }
 
-        public override decimal AdditionalShift(int workHour = 0)
+        public override decimal AdditionalShift(decimal wage, int workHour = 0)
         {
-            throw new System.NotImplementedException();
+            return wage;
         }
     }
 }

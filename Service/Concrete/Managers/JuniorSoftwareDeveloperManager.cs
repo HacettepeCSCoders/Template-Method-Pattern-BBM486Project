@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using DataAccess.Abstract;
-using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using Entities.DTOs;
 using Service.Abstract;
+using Service.Abstract.Services;
 
-namespace Service.Concrete
+namespace Service.Concrete.Managers
 {
     public class JuniorSoftwareDeveloperManager:IJuniorSoftwareDeveloperService
     {
@@ -47,6 +47,11 @@ namespace Service.Concrete
         public JuniorSoftwareDeveloper GetById(int juniorSoftwareDeveloperId)
         {
             return _juniorSoftwareDeveloperDal.Get(j=>j.Id==juniorSoftwareDeveloperId);
+        }
+        public void UpdateWage(JuniorSoftwareDeveloper juniorSoftwareDeveloper, int workHour)
+        {
+            juniorSoftwareDeveloper.Wage = _juniorSoftwareDeveloperWageCalculator.Calculate(workHour);
+            _juniorSoftwareDeveloperDal.Update(juniorSoftwareDeveloper);
         }
     }
 }

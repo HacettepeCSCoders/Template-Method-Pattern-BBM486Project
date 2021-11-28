@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Windows.Forms;
-using Core.Entities;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Service.Concrete;
+using Service.Concrete.Managers;
 
 namespace WindowsFormsApp.Forms
 {
@@ -42,7 +42,13 @@ namespace WindowsFormsApp.Forms
 
         private void UpdateEmployeeForm_Load(object sender, EventArgs e)
         {
-            
+            comboBoxUpdateSelectRole.SelectedIndex = -1;
+            ArrayList arr1 = new ArrayList();
+            foreach (var var1 in _efPositionDal.GetAll())
+            {
+                arr1.Add(var1.PositionName);
+            }
+            comboBoxUpdateSelectRole.DataSource = arr1; 
 
         }
 
@@ -490,7 +496,109 @@ namespace WindowsFormsApp.Forms
             {
                 comboBox1.Text = "NOT FOUND";
             }
+            if (comboBoxUpdateSelectRole.Text.Equals("Intern"))
+            {
+                ArrayList arr1 = new ArrayList();
 
+                foreach (var var1 in _internManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else if (comboBoxUpdateSelectRole.Text.Equals("Junior Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+
+                foreach (var var1 in _juniorSoftwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else if (comboBoxUpdateSelectRole.Text.Equals("Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+
+                foreach (var var1 in _softwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else if (comboBoxUpdateSelectRole.Text.Equals("Senior Software Developer"))
+            {
+                ArrayList arr1 = new ArrayList();
+
+                foreach (var var1 in _seniorSoftwareDeveloperManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else if (comboBoxUpdateSelectRole.Text.Equals("QA Engineer"))
+            {
+                ArrayList arr1 = new ArrayList();
+
+                foreach (var var1 in _qaEngineerManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else if (comboBoxUpdateSelectRole.Text.Equals("Test Engineer"))
+            {
+                ArrayList arr1 = new ArrayList();
+
+                foreach (var var1 in _testEngineerManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else if (comboBoxUpdateSelectRole.Text.Equals("System Analyst"))
+            {
+                ArrayList arr1 = new ArrayList();
+
+                foreach (var var1 in _systemAnalystManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else if (comboBoxUpdateSelectRole.Text.Equals("Project Manager"))
+            {
+                ArrayList arr1 = new ArrayList();
+
+                foreach (var var1 in _projectManagerManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else if (comboBoxUpdateSelectRole.Text.Equals("UI Designer"))
+            {
+                ArrayList arr1 = new ArrayList();
+
+                foreach (var var1 in _uiDesignerManager.GetAll())
+                {
+                    arr1.Add(var1.Id + "- " + var1.FirstName + " " + var1.LastName);
+                }
+
+                comboBox1.DataSource = arr1;
+            }
+            else
+            {
+                comboBox1.Text = "NOT FOUND";
+            }
             MessageBox.Show("Employee UPDATED !");
             textBox1.Text = String.Empty;
             textBox2.Text = String.Empty;

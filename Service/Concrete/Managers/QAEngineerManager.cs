@@ -3,8 +3,9 @@ using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
 using Service.Abstract;
+using Service.Abstract.Services;
 
-namespace Service.Concrete
+namespace Service.Concrete.Managers
 {
     public class QAEngineerManager:IQAEngineerService
     {
@@ -46,6 +47,11 @@ namespace Service.Concrete
         public QAEngineer GetById(int qaEngineerId)
         {
             return _qaEngineerDal.Get(j=>j.Id==qaEngineerId);
+        }
+        public void UpdateWage(QAEngineer qaEngineer, int workHour)
+        {
+            qaEngineer.Wage = _qaEngineerWageCalculator.Calculate(workHour);
+            _qaEngineerDal.Update(qaEngineer);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Core.DataAccess;
+using Core.DataAccess.EntityRepositories;
 using Entities.Concrete;
 using Entities.DTOs;
 

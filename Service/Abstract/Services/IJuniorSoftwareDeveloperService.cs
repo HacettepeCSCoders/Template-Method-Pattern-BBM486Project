@@ -2,7 +2,7 @@
 using Entities.Concrete;
 using Entities.DTOs;
 
-namespace Service.Abstract
+namespace Service.Abstract.Services
 {
     public interface IJuniorSoftwareDeveloperService
     {
@@ -15,5 +15,7 @@ namespace Service.Abstract
         void Delete(JuniorSoftwareDeveloper juniorSoftwareDeveloper);
 
         JuniorSoftwareDeveloper GetById(int juniorSoftwareDeveloperId);
+        void UpdateWage(JuniorSoftwareDeveloper juniorSoftwareDeveloper, int workHour);
+
     }
 }

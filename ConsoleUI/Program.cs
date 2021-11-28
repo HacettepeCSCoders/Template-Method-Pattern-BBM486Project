@@ -3,6 +3,7 @@ using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using Service.Concrete;
+using Service.Concrete.Managers;
 
 namespace ConsoleUI
 {

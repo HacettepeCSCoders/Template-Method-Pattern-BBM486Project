@@ -2,7 +2,7 @@
 using Entities.Concrete;
 using Entities.DTOs;
 
-namespace Service.Abstract
+namespace Service.Abstract.Services
 {
     public interface ITestEngineerService
     {
@@ -12,5 +12,7 @@ namespace Service.Abstract
         void Update(TestEngineer testEngineer);
         void Delete(TestEngineer testEngineer);
         TestEngineer GetById(int testEngineerId);
+        void UpdateWage(TestEngineer testEngineer, int workHour);
+
     }
 }

@@ -3,8 +3,9 @@ using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
 using Service.Abstract;
+using Service.Abstract.Services;
 
-namespace Service.Concrete
+namespace Service.Concrete.Managers
 {
     public class SystemAnalystManager:ISystemAnalystService
     { 
@@ -44,6 +45,11 @@ namespace Service.Concrete
         public SystemAnalyst GetById(int systemAnalystId)
         {
             return _systemAnalystDal.Get(j => j.Id == systemAnalystId);
+        }
+        public void UpdateWage(SystemAnalyst systemAnalyst, int workHour)
+        {
+            systemAnalyst.Wage = _systemAnalystWageCalculator.Calculate(workHour);
+            _systemAnalystDal.Update(systemAnalyst);
         }
     }
 }

@@ -2,7 +2,9 @@
 
 ## Payroll Project - TEMPLATE METHOD PATTERN
 
-![alt text](https://github.com/ugurcanerdogan/BBM486Project/blob/dev/templatemethod.jpg)
+![gif](https://github.com/ugurcanerdogan/BBM486Project/blob/dev/Untitled%20Project.gif)
+
+![patternUML](https://github.com/ugurcanerdogan/BBM486Project/blob/dev/templatemethod.jpg)
 
 
 # CONTRIBUTORS : 

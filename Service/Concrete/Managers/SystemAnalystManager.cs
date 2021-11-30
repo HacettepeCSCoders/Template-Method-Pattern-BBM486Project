@@ -2,15 +2,14 @@
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
-using Service.Abstract;
 using Service.Abstract.Services;
 
 namespace Service.Concrete.Managers
 {
-    public class SystemAnalystManager:ISystemAnalystService
-    { 
-        ISystemAnalystDal _systemAnalystDal;
-        private SystemAnalystWageCalculator _systemAnalystWageCalculator = new SystemAnalystWageCalculator();
+    public class SystemAnalystManager : ISystemAnalystService
+    {
+        private readonly ISystemAnalystDal _systemAnalystDal;
+        private readonly SystemAnalystWageCalculator _systemAnalystWageCalculator = new SystemAnalystWageCalculator();
 
         public SystemAnalystManager(ISystemAnalystDal systemAnalystDal)
         {
@@ -46,6 +45,7 @@ namespace Service.Concrete.Managers
         {
             return _systemAnalystDal.Get(j => j.Id == systemAnalystId);
         }
+
         public void UpdateWage(SystemAnalyst systemAnalyst, int workHour)
         {
             systemAnalyst.Wage = _systemAnalystWageCalculator.Calculate(workHour);

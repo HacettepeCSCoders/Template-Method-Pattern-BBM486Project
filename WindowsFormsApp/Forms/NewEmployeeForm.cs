@@ -3,50 +3,49 @@ using System.Collections;
 using System.Windows.Forms;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
-using Service.Concrete;
 using Service.Concrete.Managers;
 
 namespace WindowsFormsApp.Forms
 {
     public partial class NewEmployeeForm : Form
     {
-        private static string _title = "NEW EMPLOYEE";
+        private readonly EfPositionDal _efPositionDal = new EfPositionDal();
+        private readonly InternManager _internManager = new InternManager(new EfInternDal());
+
+        private readonly JuniorSoftwareDeveloperManager _juniorSoftwareDeveloperManager =
+            new JuniorSoftwareDeveloperManager(new EfJuniorSoftwareDeveloperDal());
+
+        private readonly ProjectManagerManager _projectManagerManager =
+            new ProjectManagerManager(new EfProjectManagerDal());
+
+        private readonly QAEngineerManager _qaEngineerManager = new QAEngineerManager(new EfQAEngineerDal());
+
+        private readonly SeniorSoftwareDeveloperManager _seniorSoftwareDeveloperManager =
+            new SeniorSoftwareDeveloperManager(new EfSeniorSoftwareDeveloperDal());
+
+        private readonly SoftwareDeveloperManager _softwareDeveloperManager =
+            new SoftwareDeveloperManager(new EfSoftwareDeveloperDal());
+
+        private readonly SystemAnalystManager
+            _systemAnalystManager = new SystemAnalystManager(new EfSystemAnalystDal());
+
+        private readonly TestEngineerManager _testEngineerManager = new TestEngineerManager(new EfTestEngineerDal());
+        private readonly UIDesignerManager _uiDesignerManager = new UIDesignerManager(new EfUIDesignerDal());
 
         public NewEmployeeForm()
         {
             InitializeComponent();
         }
-        InternManager _internManager = new InternManager(new EfInternDal());
 
-        JuniorSoftwareDeveloperManager _juniorSoftwareDeveloperManager =
-            new JuniorSoftwareDeveloperManager(new EfJuniorSoftwareDeveloperDal());
-
-        ProjectManagerManager _projectManagerManager = new ProjectManagerManager(new EfProjectManagerDal());
-        QAEngineerManager _qaEngineerManager = new QAEngineerManager(new EfQAEngineerDal());
-
-        SeniorSoftwareDeveloperManager _seniorSoftwareDeveloperManager =
-            new SeniorSoftwareDeveloperManager(new EfSeniorSoftwareDeveloperDal());
-
-        SoftwareDeveloperManager _softwareDeveloperManager = new SoftwareDeveloperManager(new EfSoftwareDeveloperDal());
-        SystemAnalystManager _systemAnalystManager = new SystemAnalystManager(new EfSystemAnalystDal());
-        TestEngineerManager _testEngineerManager = new TestEngineerManager(new EfTestEngineerDal());
-        UIDesignerManager _uiDesignerManager = new UIDesignerManager(new EfUIDesignerDal());
-        private EfPositionDal _efPositionDal = new EfPositionDal();
-        public static string Title
-        {
-            get => _title;
-            set => _title = value;
-        }
+        public static string Title { get; set; } = "NEW EMPLOYEE";
 
         private void NewEmployeeForm_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = -1;
-            ArrayList arr1 = new ArrayList();
-            foreach (var var1 in _efPositionDal.GetAll())
-            {
-                arr1.Add(var1.PositionName);
-            }
-            comboBox1.DataSource = arr1;        }
+            var arr1 = new ArrayList();
+            foreach (var var1 in _efPositionDal.GetAll()) arr1.Add(var1.PositionName);
+            comboBox1.DataSource = arr1;
+        }
 
         private void btnNewEmployeeSubmit_Click(object sender, EventArgs e)
         {
@@ -67,7 +66,8 @@ namespace WindowsFormsApp.Forms
                     var intern = new Intern
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now, EndDate = DateTime.Now.AddMonths(1)
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now, EndDate = DateTime.Now.AddMonths(1)
                     };
                     _internManager.Add(intern);
                 }
@@ -76,7 +76,8 @@ namespace WindowsFormsApp.Forms
                     var intern = new JuniorSoftwareDeveloper
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now
                     };
                     _juniorSoftwareDeveloperManager.Add(intern);
                 }
@@ -85,7 +86,8 @@ namespace WindowsFormsApp.Forms
                     var intern = new SoftwareDeveloper
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now
                     };
                     _softwareDeveloperManager.Add(intern);
                 }
@@ -94,7 +96,8 @@ namespace WindowsFormsApp.Forms
                     var intern = new SeniorSoftwareDeveloper
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now
                     };
                     _seniorSoftwareDeveloperManager.Add(intern);
                 }
@@ -103,7 +106,8 @@ namespace WindowsFormsApp.Forms
                     var intern = new QAEngineer
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now
                     };
                     _qaEngineerManager.Add(intern);
                 }
@@ -112,7 +116,8 @@ namespace WindowsFormsApp.Forms
                     var intern = new TestEngineer
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now
                     };
                     _testEngineerManager.Add(intern);
                 }
@@ -121,7 +126,8 @@ namespace WindowsFormsApp.Forms
                     var intern = new SystemAnalyst
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now
                     };
                     _systemAnalystManager.Add(intern);
                 }
@@ -130,7 +136,8 @@ namespace WindowsFormsApp.Forms
                     var intern = new ProjectManager
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now
                     };
                     _projectManagerManager.Add(intern);
                 }
@@ -139,16 +146,18 @@ namespace WindowsFormsApp.Forms
                     var intern = new UIDesigner
                     {
                         FirstName = textBox1.Text, LastName = textBox2.Text, EmailAddress = textBox3.Text,
-                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,StartDate = DateTime.Now
+                        Phone = Convert.ToInt64(textBox4.Text), Address = textBox5.Text, WorkSituation = textBox6.Text,
+                        StartDate = DateTime.Now
                     };
                     _uiDesignerManager.Add(intern);
                 }
-                textBox1.Text = String.Empty;
-                textBox2.Text = String.Empty;
-                textBox3.Text = String.Empty;
-                textBox4.Text = String.Empty;
-                textBox5.Text = String.Empty;
-                textBox6.Text = String.Empty;
+
+                textBox1.Text = string.Empty;
+                textBox2.Text = string.Empty;
+                textBox3.Text = string.Empty;
+                textBox4.Text = string.Empty;
+                textBox5.Text = string.Empty;
+                textBox6.Text = string.Empty;
                 comboBox1.SelectedIndex = -1;
                 MessageBox.Show("EMPLOYEE ADDED !", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

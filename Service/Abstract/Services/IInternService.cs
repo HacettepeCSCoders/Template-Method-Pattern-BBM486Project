@@ -13,6 +13,5 @@ namespace Service.Abstract.Services
         void Delete(Intern intern);
         Intern GetById(int internId);
         void UpdateWage(Intern intern, int workHour);
-        
     }
 }

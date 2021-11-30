@@ -13,6 +13,5 @@ namespace Service.Abstract.Services
         void Delete(UIDesigner uiDesigner);
         UIDesigner GetById(int uiDesignerId);
         void UpdateWage(UIDesigner uiDesigner, int workHour);
-
     }
 }

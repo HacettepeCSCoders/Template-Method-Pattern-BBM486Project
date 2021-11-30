@@ -3,7 +3,7 @@ using Core;
 
 namespace Entities.Concrete
 {
-    public class SoftwareDeveloper:IEntity
+    public class SoftwareDeveloper : IEntity
     {
         public int Id { get; set; }
         public int? SeniorId { get; set; }

@@ -3,7 +3,7 @@ using Core;
 
 namespace Entities.Concrete
 {
-    public class QAEngineer:IEntity
+    public class QAEngineer : IEntity
     {
         public int Id { get; set; }
         public int? ManagerId { get; set; }

@@ -16,6 +16,5 @@ namespace Service.Abstract.Services
 
         JuniorSoftwareDeveloper GetById(int juniorSoftwareDeveloperId);
         void UpdateWage(JuniorSoftwareDeveloper juniorSoftwareDeveloper, int workHour);
-
     }
 }

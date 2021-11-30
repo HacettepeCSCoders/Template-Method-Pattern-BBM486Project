@@ -13,6 +13,5 @@ namespace Service.Abstract.Services
         void Delete(SeniorSoftwareDeveloper seniorSoftwareDeveloper);
         SeniorSoftwareDeveloper GetById(int seniorSoftwareDeveloperId);
         void UpdateWage(SeniorSoftwareDeveloper seniorSoftwareDeveloper, int workHour);
-
     }
 }

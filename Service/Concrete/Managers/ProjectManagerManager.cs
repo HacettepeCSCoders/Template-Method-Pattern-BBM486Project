@@ -1,22 +1,22 @@
 ﻿using System.Collections.Generic;
 using DataAccess.Abstract;
 using Entities.Concrete;
-using Service.Abstract;
 using Service.Abstract.Services;
 
 namespace Service.Concrete.Managers
 {
-    
-    public class ProjectManagerManager:IProjectManagerService
+    public class ProjectManagerManager : IProjectManagerService
     {
-        IProjectManagerDal _projectManagerDal;
-        private ProjectManagerWageCalculator _projectManagerWageCalculator = new ProjectManagerWageCalculator();
-        
+        private readonly IProjectManagerDal _projectManagerDal;
+
+        private readonly ProjectManagerWageCalculator
+            _projectManagerWageCalculator = new ProjectManagerWageCalculator();
+
         public ProjectManagerManager(IProjectManagerDal projectManagerDal)
         {
             _projectManagerDal = projectManagerDal;
         }
-       
+
         public List<ProjectManager> GetAll()
         {
             return _projectManagerDal.GetAll();
@@ -39,8 +39,9 @@ namespace Service.Concrete.Managers
 
         public ProjectManager GetById(int projectManagerId)
         {
-            return _projectManagerDal.Get(j=>j.Id==projectManagerId);
+            return _projectManagerDal.Get(j => j.Id == projectManagerId);
         }
+
         public void UpdateWage(ProjectManager projectManager, int workHour)
         {
             projectManager.Wage = _projectManagerWageCalculator.Calculate(workHour);

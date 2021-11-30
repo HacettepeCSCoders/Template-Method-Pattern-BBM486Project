@@ -4,14 +4,12 @@ using System.Drawing;
 namespace WindowsFormsApp
 {
     public class ThemeColor
-    { 
-        public static List<string> ColorList = new List<string>()
+    {
+        public static List<string> ColorList = new List<string>
         {
-            
             "#192a56",
             "#192a56",
             "#192a56"
-            
         };
 
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
@@ -20,7 +18,7 @@ namespace WindowsFormsApp
             double green = color.G;
             double blue = color.B;
 
-            if (correctionFactor<0)
+            if (correctionFactor < 0)
             {
                 correctionFactor = 1 + correctionFactor;
                 red *= correctionFactor;

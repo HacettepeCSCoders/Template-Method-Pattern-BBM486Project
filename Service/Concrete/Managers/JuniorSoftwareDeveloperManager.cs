@@ -2,23 +2,22 @@
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
-using Service.Abstract;
 using Service.Abstract.Services;
 
 namespace Service.Concrete.Managers
 {
-    public class JuniorSoftwareDeveloperManager:IJuniorSoftwareDeveloperService
+    public class JuniorSoftwareDeveloperManager : IJuniorSoftwareDeveloperService
     {
-        IJuniorSoftwareDeveloperDal _juniorSoftwareDeveloperDal;
+        private readonly IJuniorSoftwareDeveloperDal _juniorSoftwareDeveloperDal;
 
-        private JuniorSoftwareDeveloperWageCalculator _juniorSoftwareDeveloperWageCalculator =
+        private readonly JuniorSoftwareDeveloperWageCalculator _juniorSoftwareDeveloperWageCalculator =
             new JuniorSoftwareDeveloperWageCalculator();
 
         public JuniorSoftwareDeveloperManager(IJuniorSoftwareDeveloperDal juniorSoftwareDeveloperDal)
         {
             _juniorSoftwareDeveloperDal = juniorSoftwareDeveloperDal;
         }
-        
+
         public List<JuniorSoftwareDeveloper> GetAll()
         {
             return _juniorSoftwareDeveloperDal.GetAll();
@@ -46,8 +45,9 @@ namespace Service.Concrete.Managers
 
         public JuniorSoftwareDeveloper GetById(int juniorSoftwareDeveloperId)
         {
-            return _juniorSoftwareDeveloperDal.Get(j=>j.Id==juniorSoftwareDeveloperId);
+            return _juniorSoftwareDeveloperDal.Get(j => j.Id == juniorSoftwareDeveloperId);
         }
+
         public void UpdateWage(JuniorSoftwareDeveloper juniorSoftwareDeveloper, int workHour)
         {
             juniorSoftwareDeveloper.Wage = _juniorSoftwareDeveloperWageCalculator.Calculate(workHour);

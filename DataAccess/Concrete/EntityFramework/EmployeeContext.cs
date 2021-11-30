@@ -3,13 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EmployeeContext:DbContext
+    public class EmployeeContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-JIRLH52;Database=Employee;Trusted_Connection=true");
-        }
-
         public DbSet<Intern> Interns { get; set; }
         public DbSet<JuniorSoftwareDeveloper> JuniorSoftwareDevelopers { get; set; }
         public DbSet<Position> Positions { get; set; }
@@ -21,5 +16,9 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<TestEngineer> TestEngineers { get; set; }
         public DbSet<UIDesigner> UIDesigners { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=DESKTOP-JIRLH52;Database=Employee;Trusted_Connection=true");
+        }
     }
 }

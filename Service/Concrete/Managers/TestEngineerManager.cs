@@ -2,16 +2,15 @@
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
-using Service.Abstract;
 using Service.Abstract.Services;
 
 namespace Service.Concrete.Managers
 {
-    public class TestEngineerManager:ITestEngineerService
-    { 
-        ITestEngineerDal _testEngineerDal;
-        private TestEngineerWageCalculator _testEngineerWageCalculator = new TestEngineerWageCalculator();
-        
+    public class TestEngineerManager : ITestEngineerService
+    {
+        private readonly ITestEngineerDal _testEngineerDal;
+        private readonly TestEngineerWageCalculator _testEngineerWageCalculator = new TestEngineerWageCalculator();
+
         public TestEngineerManager(ITestEngineerDal testEngineerDal)
         {
             _testEngineerDal = testEngineerDal;
@@ -47,6 +46,7 @@ namespace Service.Concrete.Managers
         {
             return _testEngineerDal.Get(j => j.Id == testEngineerId);
         }
+
         public void UpdateWage(TestEngineer testEngineer, int workHour)
         {
             testEngineer.Wage = _testEngineerWageCalculator.Calculate(workHour);

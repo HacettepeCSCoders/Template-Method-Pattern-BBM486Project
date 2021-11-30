@@ -2,9 +2,7 @@
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
-using Service.Abstract;
 using Service.Abstract.Services;
-using Service.Concrete;
 using Service.Concrete.Managers;
 
 namespace WebAPI.Controllers

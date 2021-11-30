@@ -8,9 +8,9 @@ using Entities.DTOs;
 
 namespace DataAccess.Concrete.InMemory
 {
-    public class InMemoryInternDal:IInternDal
+    public class InMemoryInternDal : IInternDal
     {
-        List<Intern> _interns;
+        private readonly List<Intern> _interns;
 
         public InMemoryInternDal()
         {
@@ -30,12 +30,6 @@ namespace DataAccess.Concrete.InMemory
                     WorkSituation = "Remote", Wage = 2500
                 }
             };
-
-        }
-
-        public List<Intern> GetAll()
-        {
-            return _interns;
         }
 
         public List<Intern> GetAll(Expression<Func<Intern, bool>> filter = null)
@@ -51,18 +45,17 @@ namespace DataAccess.Concrete.InMemory
         public void Add(Intern intern)
         {
             _interns.Add(intern);
-            
         }
 
         public void Update(Intern intern)
         {
-            Intern internToDelete = _interns.SingleOrDefault(i => i.Id == intern.Id);
+            var internToDelete = _interns.SingleOrDefault(i => i.Id == intern.Id);
             _interns.Remove(internToDelete);
         }
 
         public void Delete(Intern intern)
         {
-            Intern internToUpdate = _interns.SingleOrDefault(i => i.Id == intern.Id);
+            var internToUpdate = _interns.SingleOrDefault(i => i.Id == intern.Id);
             internToUpdate.FirstName = intern.FirstName;
             internToUpdate.LastName = intern.LastName;
             internToUpdate.Address = intern.Address;
@@ -78,6 +71,11 @@ namespace DataAccess.Concrete.InMemory
         public List<InternDetailDto> GetInternDetails()
         {
             throw new NotImplementedException();
+        }
+
+        public List<Intern> GetAll()
+        {
+            return _interns;
         }
 
         public List<Intern> GetAllByMentor(int mentorId)

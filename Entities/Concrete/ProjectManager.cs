@@ -3,7 +3,7 @@ using Core;
 
 namespace Entities.Concrete
 {
-    public class ProjectManager:IEntity
+    public class ProjectManager : IEntity
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

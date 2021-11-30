@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using Core.DataAccess.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -9,16 +7,16 @@ using Entities.DTOs;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfTestEngineerDal : EfEntityRepositoryBase<TestEngineer,EmployeeContext>,ITestEngineerDal
+    public class EfTestEngineerDal : EfEntityRepositoryBase<TestEngineer, EmployeeContext>, ITestEngineerDal
     {
         public List<TestEngineerDto> GetTestEngineerDetails()
         {
-            using (EmployeeContext context = new EmployeeContext())
+            using (var context = new EmployeeContext())
             {
                 var result = from s in context.TestEngineers
                     join p in context.ProjectManagers
                         on s.ManagerId.Value equals p.Id
-                    select new TestEngineerDto()
+                    select new TestEngineerDto
                     {
                         Id = s.Id,
                         ManagerId = p.Id,
@@ -28,7 +26,7 @@ namespace DataAccess.Concrete.EntityFramework
                         Wage = s.Wage.Value
                     };
                 return result.ToList();
-            }        
+            }
         }
     }
 }

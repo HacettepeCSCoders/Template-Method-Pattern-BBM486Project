@@ -2,15 +2,14 @@
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
-using Service.Abstract;
 using Service.Abstract.Services;
 
 namespace Service.Concrete.Managers
 {
-    public class InternManager:IInternService
+    public class InternManager : IInternService
     {
-        IInternDal _internDal;
-        private InternWageCalculator _internWageCalculator = new InternWageCalculator();
+        private readonly IInternDal _internDal;
+        private readonly InternWageCalculator _internWageCalculator = new InternWageCalculator();
 
         public InternManager(IInternDal internDal)
         {
@@ -35,7 +34,6 @@ namespace Service.Concrete.Managers
         public void Update(Intern intern)
         {
             _internDal.Update(intern);
-
         }
 
         public void Delete(Intern intern)
@@ -45,7 +43,7 @@ namespace Service.Concrete.Managers
 
         public Intern GetById(int internId)
         {
-            return _internDal.Get(i=>i.Id==internId);
+            return _internDal.Get(i => i.Id == internId);
         }
 
         public void UpdateWage(Intern intern, int workHour)

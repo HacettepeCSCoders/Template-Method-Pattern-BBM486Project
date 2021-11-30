@@ -3,7 +3,7 @@ using Core;
 
 namespace Entities.Concrete
 {
-    public class UIDesigner:IEntity
+    public class UIDesigner : IEntity
     {
         public int Id { get; set; }
         public int? ManagerId { get; set; }

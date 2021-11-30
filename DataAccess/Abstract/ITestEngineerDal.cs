@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using Core.DataAccess;
 using Core.DataAccess.EntityRepositories;
 using Entities.Concrete;
 using Entities.DTOs;
 
 namespace DataAccess.Abstract
 {
-    public interface ITestEngineerDal: IEntityRepository<TestEngineer>
+    public interface ITestEngineerDal : IEntityRepository<TestEngineer>
     {
         List<TestEngineerDto> GetTestEngineerDetails();
     }

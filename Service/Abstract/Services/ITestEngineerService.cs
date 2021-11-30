@@ -13,6 +13,5 @@ namespace Service.Abstract.Services
         void Delete(TestEngineer testEngineer);
         TestEngineer GetById(int testEngineerId);
         void UpdateWage(TestEngineer testEngineer, int workHour);
-
     }
 }

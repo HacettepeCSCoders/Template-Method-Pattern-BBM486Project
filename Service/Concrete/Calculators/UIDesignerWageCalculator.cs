@@ -2,7 +2,7 @@
 
 namespace Service.Concrete
 {
-    public class UIDesignerWageCalculator:AbstractWageCalculator
+    public class UIDesignerWageCalculator : AbstractWageCalculator
     {
         public override decimal BonusShare(decimal wage)
         {
@@ -14,7 +14,7 @@ namespace Service.Concrete
         {
             if (workHour > 160)
             {
-                int addition = workHour - 160;
+                var addition = workHour - 160;
                 wage += addition * 40;
                 return wage;
             }

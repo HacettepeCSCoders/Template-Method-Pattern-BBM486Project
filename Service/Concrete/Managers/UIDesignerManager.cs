@@ -2,16 +2,15 @@
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
-using Service.Abstract;
 using Service.Abstract.Services;
 
 namespace Service.Concrete.Managers
 {
-    public class UIDesignerManager:IUIDesignerService
+    public class UIDesignerManager : IUIDesignerService
     {
-        IUIDesignerDal _uiDesignerDal;
-        private UIDesignerWageCalculator _uiDesignerWageCalculator = new UIDesignerWageCalculator();
-        
+        private readonly IUIDesignerDal _uiDesignerDal;
+        private readonly UIDesignerWageCalculator _uiDesignerWageCalculator = new UIDesignerWageCalculator();
+
         public UIDesignerManager(IUIDesignerDal uiDesignerDal)
         {
             _uiDesignerDal = uiDesignerDal;
@@ -46,6 +45,7 @@ namespace Service.Concrete.Managers
         {
             return _uiDesignerDal.Get(j => j.Id == uiDesigner);
         }
+
         public void UpdateWage(UIDesigner uiDesigner, int workHour)
         {
             uiDesigner.Wage = _uiDesignerWageCalculator.Calculate(workHour);

@@ -1,25 +1,23 @@
-﻿using System;
-using DataAccess.Concrete.EntityFramework;
-using DataAccess.Concrete.InMemory;
-using Entities.Concrete;
-using Service.Concrete;
+﻿using DataAccess.Concrete.EntityFramework;
 using Service.Concrete.Managers;
 
 namespace ConsoleUI
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            InternManager _internManager = new InternManager(new EfInternDal());
-            JuniorSoftwareDeveloperManager _juniorSoftwareDeveloperManager = new JuniorSoftwareDeveloperManager(new EfJuniorSoftwareDeveloperDal());
-            ProjectManagerManager _projectManager = new ProjectManagerManager(new EfProjectManagerDal());
-            QAEngineerManager _qaEngineerManager = new QAEngineerManager(new EfQAEngineerDal());
-            SeniorSoftwareDeveloperManager _seniorSoftwareDeveloperManager = new SeniorSoftwareDeveloperManager(new EfSeniorSoftwareDeveloperDal());
-            SoftwareDeveloperManager _softwareDeveloperManager = new SoftwareDeveloperManager(new EfSoftwareDeveloperDal());
-            SystemAnalystManager _systemAnalystManager = new SystemAnalystManager(new EfSystemAnalystDal());
-            TestEngineerManager _testEngineerManager = new TestEngineerManager(new EfTestEngineerDal());
-            UIDesignerManager _uiDesignerManager = new UIDesignerManager(new EfUIDesignerDal());
+            var _internManager = new InternManager(new EfInternDal());
+            var _juniorSoftwareDeveloperManager =
+                new JuniorSoftwareDeveloperManager(new EfJuniorSoftwareDeveloperDal());
+            var _projectManager = new ProjectManagerManager(new EfProjectManagerDal());
+            var _qaEngineerManager = new QAEngineerManager(new EfQAEngineerDal());
+            var _seniorSoftwareDeveloperManager =
+                new SeniorSoftwareDeveloperManager(new EfSeniorSoftwareDeveloperDal());
+            var _softwareDeveloperManager = new SoftwareDeveloperManager(new EfSoftwareDeveloperDal());
+            var _systemAnalystManager = new SystemAnalystManager(new EfSystemAnalystDal());
+            var _testEngineerManager = new TestEngineerManager(new EfTestEngineerDal());
+            var _uiDesignerManager = new UIDesignerManager(new EfUIDesignerDal());
 
             // Intern intern = _internManager.GetById(1);
             // Console.WriteLine("First : " + intern.FirstName);

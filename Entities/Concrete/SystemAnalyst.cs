@@ -3,7 +3,7 @@ using Core;
 
 namespace Entities.Concrete
 {
-    public class SystemAnalyst:IEntity
+    public class SystemAnalyst : IEntity
     {
         public int Id { get; set; }
         public int? ManagerId { get; set; }

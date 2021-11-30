@@ -13,6 +13,5 @@ namespace Service.Abstract.Services
         void Delete(SystemAnalyst systemAnalyst);
         SystemAnalyst GetById(int systemAnalystId);
         void UpdateWage(SystemAnalyst systemAnalyst, int workHour);
-
     }
 }

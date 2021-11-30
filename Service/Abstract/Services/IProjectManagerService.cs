@@ -11,6 +11,5 @@ namespace Service.Abstract.Services
         void Delete(ProjectManager projectManager);
         ProjectManager GetById(int projectManagerId);
         void UpdateWage(ProjectManager projectManager, int workHour);
-
     }
 }

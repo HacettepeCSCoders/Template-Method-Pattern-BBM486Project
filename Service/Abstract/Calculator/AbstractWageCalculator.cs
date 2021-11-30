@@ -4,10 +4,7 @@
     {
         public decimal MinimumWage(int workHour)
         {
-            if (workHour >= 160)
-            {
-                return 2729;
-            }
+            if (workHour >= 160) return 2729;
 
             return 0;
         }
@@ -19,12 +16,12 @@
         }
 
         public abstract decimal BonusShare(decimal wage);
-        public abstract decimal AdditionalShift(decimal wage, int workHour=0);
-        
+        public abstract decimal AdditionalShift(decimal wage, int workHour = 0);
+
         // Template Method
-        public  decimal Calculate(int workHour)
+        public decimal Calculate(int workHour)
         {
-            decimal wage = MinimumWage(workHour);
+            var wage = MinimumWage(workHour);
             wage = BonusShare(wage);
             wage = AdditionalShift(wage, workHour);
             wage = IndividualPensionShare(wage);

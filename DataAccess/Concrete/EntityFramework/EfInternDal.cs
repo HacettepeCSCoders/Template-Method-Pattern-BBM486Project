@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using Core.DataAccess.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
-using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfInternDal: EfEntityRepositoryBase<Intern,EmployeeContext>,IInternDal
+    public class EfInternDal : EfEntityRepositoryBase<Intern, EmployeeContext>, IInternDal
     {
         public List<InternDetailDto> GetInternDetails()
         {
-            using (EmployeeContext context = new EmployeeContext())
+            using (var context = new EmployeeContext())
             {
                 var result = from i in context.Interns
                     join s in context.SoftwareDevelopers

@@ -7,11 +7,12 @@ using Entities.DTOs;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfJuniorSoftwareDeveloperDal : EfEntityRepositoryBase<JuniorSoftwareDeveloper,EmployeeContext>,IJuniorSoftwareDeveloperDal
+    public class EfJuniorSoftwareDeveloperDal : EfEntityRepositoryBase<JuniorSoftwareDeveloper, EmployeeContext>,
+        IJuniorSoftwareDeveloperDal
     {
         public List<JuniorSoftwareDeveloperDto> GetJuniorSoftwareDeveloperDetails()
         {
-            using (EmployeeContext context = new EmployeeContext())
+            using (var context = new EmployeeContext())
             {
                 var result = from j in context.JuniorSoftwareDevelopers
                     join s in context.SeniorSoftwareDevelopers

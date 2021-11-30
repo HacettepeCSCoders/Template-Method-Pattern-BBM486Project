@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp
@@ -9,14 +10,14 @@ namespace WindowsFormsApp
         //Fields
         private Color borderColor = Color.MediumSlateBlue;
         private int borderSize = 2;
-        private bool underlinedStyle = false;
-        
+        private bool underlinedStyle;
+
         //Constructor
         public CustomTextBox()
         {
             InitializeComponent();
         }
-        
+
         //Properties
         public Color BorderColor
         {
@@ -24,7 +25,7 @@ namespace WindowsFormsApp
             set
             {
                 borderColor = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
@@ -34,7 +35,7 @@ namespace WindowsFormsApp
             set
             {
                 borderSize = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
@@ -44,32 +45,32 @@ namespace WindowsFormsApp
             set
             {
                 underlinedStyle = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
-        
+
         //Overriden methods
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            Graphics graph = e.Graphics;
-            
+            var graph = e.Graphics;
+
             //Draw border
-            using (Pen penBorder = new Pen(borderColor, borderSize))
+            using (var penBorder = new Pen(borderColor, borderSize))
             {
-                penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
+                penBorder.Alignment = PenAlignment.Inset;
 
                 if (underlinedStyle) // Line style
-                    graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                    graph.DrawLine(penBorder, 0, Height - 1, Width, Height - 1);
                 else // normal style
-                    graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                    graph.DrawRectangle(penBorder, 0, 0, Width - 0.5F, Height - 0.5F);
             }
         }
 
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            if (this.DesignMode)
+            if (DesignMode)
                 UpdateControlHeight();
         }
 
@@ -83,12 +84,12 @@ namespace WindowsFormsApp
         {
             if (textBox1.Multiline == false)
             {
-                int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height + 1;
+                var txtHeight = TextRenderer.MeasureText("Text", Font).Height + 1;
                 textBox1.Multiline = true;
                 textBox1.MinimumSize = new Size(0, txtHeight);
                 textBox1.Multiline = false;
 
-                this.Height = textBox1.Height + this.Padding.Bottom;
+                Height = textBox1.Height + Padding.Bottom;
             }
         }
     }

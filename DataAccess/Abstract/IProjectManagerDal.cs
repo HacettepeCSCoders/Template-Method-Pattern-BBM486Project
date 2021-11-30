@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using Core.DataAccess;
-using Core.DataAccess.EntityRepositories;
+﻿using Core.DataAccess.EntityRepositories;
 using Entities.Concrete;
 
 namespace DataAccess.Abstract
 {
-    public interface IProjectManagerDal: IEntityRepository<ProjectManager>
+    public interface IProjectManagerDal : IEntityRepository<ProjectManager>
     {
     }
 }

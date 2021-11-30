@@ -2,7 +2,7 @@
 
 namespace Service.Concrete
 {
-    public class InternWageCalculator:AbstractWageCalculator
+    public class InternWageCalculator : AbstractWageCalculator
     {
         public override decimal BonusShare(decimal wage)
         {
